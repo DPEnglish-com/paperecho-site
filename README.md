@@ -34,6 +34,10 @@ python3 -m http.server 8080
 | 下载区 `download-meta` | 版本号 / 包体积 / 系统要求 |
 | 下载区 `download-sha` | APK 的 SHA-256:`shasum -a 256 PaperEcho.apk` |
 
+**同步更新 App 内检查更新清单**(`version.json`,App「设置 → 关于与更新 → 检查更新」读取它):
+
+每次发布新版时,把 `site/version.json` 的 `versionCode`(整数,必须大于上一版)、`versionName`、`notes`(一句话更新说明)同步更新;`apkUrl` 保持 `downloads/PaperEcho.apk` 相对路径即可。未更新 `version.json` 会导致 App 检查更新永远提示「已是最新版本」。
+
 ## 二、部署方案(三选一)
 
 ### 方案 1:GitHub Pages(免费,海外访问快)
@@ -81,6 +85,7 @@ server {
 - [ ] 密钥审计:全站与仓库无任何 API 密钥(页面零 API 调用,音频为静态 MP3)
 - [ ] `PaperEcho.apk` 已放置或 3 处 `href` 已替换
 - [ ] 版本号 / 体积 / 日期已更新(2 处)
+- [ ] `version.json` 的 versionCode/versionName/notes 已同步本次发布版本
 - [ ] SHA-256 已填写(1 处)
 - [ ] 在手机浏览器点过一遍下载按钮,确认立即开始下载
 - [ ] 交互演示的发音播放正常(Chrome/Safari 移动端)
@@ -93,6 +98,7 @@ site/
 ├── styles.css          # 样式(色板变量在 :root;演示样式在文件末尾)
 ├── main.js             # 入场动画、设备切换与交互演示逻辑
 ├── favicon.svg         # 图标(与 App 启动图标同款)
+├── version.json        # App 内「检查更新」的版本清单(发布时同步 versionCode/versionName/notes)
 ├── assets/audio/*.mp3  # 演示发音(预生成录音,约 350KB,可直接随站托管)
 └── downloads/
     ├── PaperEcho.apk   # ← 你的 APK 放这里(方案 A)
