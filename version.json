@@ -1,6 +1,6 @@
 {
-  "versionCode": 9,
-  "versionName": "1.2.4",
+  "versionCode": 10,
+  "versionName": "1.2.5",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "重做刷词界面：场景与子分类选择、每类至少十词、单词卡片网格翻转；修复首次打开没有内置词表的问题"
+  "notes": "刷词支持不熟/记得标记与筛选；可批量加入新录入；主词库可批量导入刷词子分类并自动补全分类"
 }
