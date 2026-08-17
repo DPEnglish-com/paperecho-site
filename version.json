@@ -1,6 +1,6 @@
 {
-  "versionCode": 4,
-  "versionName": "1.1.0",
+  "versionCode": 5,
+  "versionName": "1.2.0",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "新增快速刷词板块（12 场景词表）；设置页整理；支持检查更新"
+  "notes": "新增快速刷词板块（12 场景词表）；阅读与刷词双向联动；设置页整理；支持检查更新"
 }
