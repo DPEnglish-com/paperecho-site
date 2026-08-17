@@ -1,6 +1,6 @@
 {
-  "versionCode": 8,
-  "versionName": "1.2.3",
+  "versionCode": 9,
+  "versionName": "1.2.4",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "新增独立「刷词」一级栏目；与主词库、今日新词和复习进度保持联动"
+  "notes": "重做刷词界面：场景与子分类选择、每类至少十词、单词卡片网格翻转；修复首次打开没有内置词表的问题"
 }
