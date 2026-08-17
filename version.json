@@ -1,6 +1,6 @@
 {
-  "versionCode": 11,
-  "versionName": "1.2.6",
+  "versionCode": 12,
+  "versionName": "1.2.7",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "浏览式刷词工作台：大分类直出全部单词、小分类二级筛选、长按批量选择、翻面自动发音；移除开始刷词流程"
+  "notes": "刷词仅保留场景词表；大分类直出全部词、小分类筛选；移除旧训练配置；紧凑卡片；支持双方选中后添加到对面"
 }
