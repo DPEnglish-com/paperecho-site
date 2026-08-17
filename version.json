@@ -1,6 +1,6 @@
 {
-  "versionCode": 5,
-  "versionName": "1.2.0",
+  "versionCode": 6,
+  "versionName": "1.2.1",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "新增快速刷词板块（12 场景词表）；阅读与刷词双向联动；设置页整理；支持检查更新"
+  "notes": "紧急修复：部分设备上文本生成失败的问题；AI 推荐词数更稳更快；目标词出现次数可自定义"
 }
