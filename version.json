@@ -1,6 +1,6 @@
 {
-  "versionCode": 10,
-  "versionName": "1.2.5",
+  "versionCode": 11,
+  "versionName": "1.2.6",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "刷词支持不熟/记得标记与筛选；可批量加入新录入；主词库可批量导入刷词子分类并自动补全分类"
+  "notes": "浏览式刷词工作台：大分类直出全部单词、小分类二级筛选、长按批量选择、翻面自动发音；移除开始刷词流程"
 }
