@@ -1,6 +1,6 @@
 {
-  "versionCode": 7,
-  "versionName": "1.2.2",
+  "versionCode": 8,
+  "versionName": "1.2.3",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "修复 AI 推荐词数在不同模型平台上的返回解析；发现新版本后支持应用内下载更新包"
+  "notes": "新增独立「刷词」一级栏目；与主词库、今日新词和复习进度保持联动"
 }
