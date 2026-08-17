@@ -1,6 +1,6 @@
 {
-  "versionCode": 6,
-  "versionName": "1.2.1",
+  "versionCode": 7,
+  "versionName": "1.2.2",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "紧急修复：部分设备上文本生成失败的问题；AI 推荐词数更稳更快；目标词出现次数可自定义"
+  "notes": "修复 AI 推荐词数在不同模型平台上的返回解析；发现新版本后支持应用内下载更新包"
 }
