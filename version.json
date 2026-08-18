@@ -1,6 +1,6 @@
 {
-  "versionCode": 12,
-  "versionName": "1.2.7",
+  "versionCode": 13,
+  "versionName": "1.2.8",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "刷词仅保留场景词表；大分类直出全部词、小分类筛选；移除旧训练配置；紧凑卡片；支持双方选中后添加到对面"
+  "notes": "新增实时口语练习与麦克风权限保护；修复发布包生成与语音会话稳定性；刷词场景工作台保持不变"
 }

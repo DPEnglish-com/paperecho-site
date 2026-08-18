@@ -12,7 +12,7 @@ python3 -m http.server 8080
 
 ## 一、下载按钮配置(上线前必做)
 
-下载按钮共 **3 处**(顶栏、首屏、下载区),都指向 `href="./downloads/PaperEcho.apk"`,`download` 属性保证点击即开始下载。发布时二选一:
+下载链接共 **4 处**(顶栏、首屏、正文引导、下载区),都指向 `href="./downloads/PaperEcho.apk"`,`download` 属性保证点击即开始下载。发布时二选一:
 
 **方案 A · APK 与网站同站托管(推荐自有服务器/OSS)**
 
@@ -37,6 +37,8 @@ python3 -m http.server 8080
 **同步更新 App 内检查更新清单**(`version.json`,App「设置 → 关于与更新 → 检查更新」读取它):
 
 每次发布新版时,把 `site/version.json` 的 `versionCode`(整数,必须大于上一版)、`versionName`、`notes`(一句话更新说明)同步更新;`apkUrl` 保持 `downloads/PaperEcho.apk` 相对路径即可。未更新 `version.json` 会导致 App 检查更新永远提示「已是最新版本」。
+
+当前官网发布包：v1.2.8（versionCode 13），3,149,218 bytes，SHA-256 `b5e90caab0d31a91281df43c6af3fa1922fbac93873f8d42c75f3336ec865e5f`。
 
 ## 二、部署方案(三选一)
 
