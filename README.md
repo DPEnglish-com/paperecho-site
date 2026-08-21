@@ -38,7 +38,18 @@ python3 -m http.server 8080
 
 每次发布新版时,把 `site/version.json` 的 `versionCode`(整数,必须大于上一版)、`versionName`、`notes`(一句话更新说明)同步更新;`apkUrl` 保持 `downloads/PaperEcho.apk` 相对路径即可。未更新 `version.json` 会导致 App 检查更新永远提示「已是最新版本」。
 
-当前官网发布包：v1.2.11（versionCode 16），3,165,602 bytes，SHA-256 `01bf9dd7127fd4a01c77df10c63f3aa0687ed1415e38a990b8b9f10b8ce9ea91`。
+当前官网发布包：v1.2.12（versionCode 17），3,181,986 bytes，SHA-256 `0ae7f8cfc6501e87ae18a98932cad4b6bee5f655221438c62aa25a8753c1816e`。
+
+## 一·补 · 域名与 SEO 占位(发布前必做)
+
+页面为收录与社交分享补了一批元信息,其中的**正式域名**是占位值,发布前必须替换——index.html 的 `canonical`、`og:url`、`og:image`,以及 `sitemap.xml`、`robots.txt` 里的 `https://paperecho.app` 都要改成你的正式域名(一处替换,多处生效):
+
+- **canonical / og:url / og:image**：在 `site/index.html` 的 `<head>` 里搜 `paperecho.app`,替换成你的域名即可;
+- **sitemap.xml / robots.txt**：把里面的 `https://paperecho.app` 一并替换(与 canonical 保持一致);
+- **og:image**：分享卡片用的是 `site/assets/og.png`(1200×630,已生成)。想换文案/配色可改;固定用该图即可。
+- 若上 GitHub Pages,域名形如 `https://<用户名>.github.io/<仓库名>/`,注意结尾斜杠与子路径。
+
+> 未替换域名会导致搜索引擎抓到的 canonical / 分享链接指到不存在的站点。上线清单里已加此检查项。
 
 ## 二、部署方案(三选一)
 
@@ -85,6 +96,8 @@ server {
 ## 三、上线前检查清单
 
 - [ ] 密钥审计:全站与仓库无任何 API 密钥(页面零 API 调用,音频为静态 MP3)
+- [ ] 正式域名已替换:index.html 的 `canonical`/`og:url`/`og:image` 与 `sitemap.xml`/`robots.txt` 里的 `https://paperecho.app`
+- [ ] `assets/og.png`、`robots.txt`、`sitemap.xml` 已随站上传
 - [ ] `PaperEcho.apk` 已放置或 3 处 `href` 已替换
 - [ ] 版本号 / 体积 / 日期已更新(2 处)
 - [ ] `version.json` 的 versionCode/versionName/notes 已同步本次发布版本
@@ -96,13 +109,33 @@ server {
 
 ```
 site/
-├── index.html          # 页面(下载链接与发布信息在此修改)
+├── index.html          # 页面(下载链接 / 发布信息 / SEO 与分享元信息,含 canonical、OG、JSON-LD)
 ├── styles.css          # 样式(色板变量在 :root;演示样式在文件末尾)
-├── main.js             # 入场动画、设备切换与交互演示逻辑
+├── main.js             # 入场动画、设备切换、移动端菜单与交互演示逻辑
 ├── favicon.svg         # 图标(与 App 启动图标同款)
+├── robots.txt          # 爬虫允许规则与 sitemap 指向(发布前替换域名)
+├── sitemap.xml         # 站点地图(发布前替换域名)
 ├── version.json        # App 内「检查更新」的版本清单(发布时同步 versionCode/versionName/notes)
-├── assets/audio/*.mp3  # 演示发音(预生成录音,约 350KB,可直接随站托管)
+├── assets/
+│   ├── audio/*.mp3     # 演示发音(预生成录音,约 350KB,可直接随站托管)
+│   └── og.png          # 社交分享卡片图(1200×630,OG/Twitter 分享用)
 └── downloads/
     ├── PaperEcho.apk   # ← 你的 APK 放这里(方案 A)
     └── README.md       # 放置说明(不要随站上传)
+
+## 五、性能与托管建议
+
+页面为纯静态、零依赖(无框架、无外部 CDN、字体走系统栈),已按性能优先处理:
+
+- **音频按需加载**：演示 8 个 MP3 用 `preload="none"`,仅点击播放时才请求,首屏不预载;
+- **无光栅大图**：视觉全部由内联 CSS/SVG 绘制,首屏 LCP 快,无第三方字体下载;
+- 演示音频与 og.png 均为预生成静态文件,可直接随站托管。
+
+托管时建议开启(以兼容静态托管为准):
+
+- 对 `.mp3 / .png / .css / .js / .html / .svg` 启用 **gzip / Brotli** 压缩(音频已压缩,二次收益有限);
+- 设置 **Cache-Control**：`index.html` 用 `no-cache`(每次校验),其余 `max-age=3600`;APK 支持 Range 断点续传;
+- 若走 OSS+CDN,确认开启 **HTTP/2 / HTTP/3** 与回源压缩,国内用户优先选国内节点。
+
+> 如需进一步瘦身,可仅保留 `sentence-gb.mp3`、`sentence-us.mp3` 两个关键演示音频,其余文字演示已足够(改动需同步 main.js 的 AUDIO 表)。
 ```

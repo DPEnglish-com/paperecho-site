@@ -1208,3 +1208,127 @@ svg { display: block; }
   display: inline-block;
   max-width: 100%;
 }
+
+/* ============================================================
+   优化新增:信任条 / 常见问题 / 移动端导航
+   ============================================================ */
+
+/* 首屏信任条 */
+.hero-trust {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+}
+.hero-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--teal-deep);
+}
+.hero-trust svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* 常见问题(手风琴,零 JS) */
+.faq { padding: clamp(60px, 9vw, 100px) clamp(18px, 5vw, 64px); }
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.16s ease;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--teal-deep);
+  border-bottom: 2px solid var(--teal-deep);
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease;
+}
+.faq-item summary:hover { background: var(--paper-2); }
+.faq-item[open] summary::before { transform: rotate(45deg); }
+.faq-body { padding: 0 22px 18px 48px; }
+.faq-body p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.75; }
+.faq-more { text-align: center; margin-top: 26px; font-size: 13.5px; color: var(--ink-soft); }
+.faq-more a { color: var(--terra-deep); font-weight: 600; }
+
+/* 移动端导航按钮 */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  flex: none;
+  transition: background-color 0.16s ease, border-color 0.16s ease;
+}
+.nav-toggle svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.nav-toggle:hover { border-color: var(--teal); color: var(--teal-deep); }
+
+@media (max-width: 640px) {
+  .site-header { gap: 14px; }
+  .brand-sub { display: none; }
+  .site-header .btn-small { padding: 9px 12px; }
+  .site-header .btn-small .btn-label { display: none; }
+  .nav-toggle { display: flex; }
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 6px clamp(18px, 4vw, 44px) 12px;
+    background: color-mix(in srgb, var(--paper) 96%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 16px 30px rgba(23, 59, 53, 0.10);
+    display: none;
+  }
+  .site-header.menu-open .site-nav { display: flex; }
+  .site-nav a { padding: 13px 2px; font-size: 15.5px; border-bottom: 1px solid var(--line); }
+  .site-nav a:last-child { border-bottom: none; }
+  .faq-body { padding-left: 26px; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .faq-item summary { color: var(--ink); }
+}

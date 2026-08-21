@@ -1,6 +1,6 @@
 {
-  "versionCode": 16,
-  "versionName": "1.2.11",
+  "versionCode": 17,
+  "versionName": "1.2.12",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "口语模块加入 IELTS Part 1/2/3 流程与计时、转写复盘评分、表达纠正和历史会话回看；实时口语配置支持自定义模型、音色和 Endpoint"
+  "notes": "修复 Qwen Realtime 首轮响应握手，并迁移不受支持的 Cherry 音色，实时口语可正常开始对话"
 }

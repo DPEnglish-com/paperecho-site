@@ -1,0 +1,5 @@
+# ★ 发布前把 https://paperecho.app 替换成你的正式域名
+User-agent: *
+Allow: /
+
+Sitemap: https://paperecho.app/sitemap.xml

@@ -4,13 +4,64 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PaperEcho · 纸笔备考雅思 —— 把单词变成听写、精听、长文与写作批改</title>
-  <meta name="description" content="考场是纸笔,备考也该是。PaperEcho 把你正在背的单词变成听写、精听、长文阅读和写作批改;手机出题朗读,答案写在纸上,复习自动安排。">
+  <meta name="description" content="考场是纸笔,备考也该是。PaperEcho 把你正在背的单词变成听写、精听、长文阅读和写作批改;手机出题朗读,答案写在纸上,复习自动安排。雅思纸笔备考必装。">
+  <meta name="keywords" content="雅思,雅思备考,雅思听力,雅思写作,雅思词汇,听写,精听,长文精读,写作批改,纸笔考试,背单词,间隔复习,Android,安卓应用">
+  <meta name="author" content="肖恩">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#173B35">
+
+  <!-- ★ 发布前替换 https://paperecho.app 成你的正式域名(canonical / og:url / sitemap / robots 共用) -->
+  <link rel="canonical" href="https://paperecho.app/">
+
+  <!-- 社交分享卡片 (OG + Twitter) -->
   <meta property="og:title" content="PaperEcho · 纸笔备考雅思">
   <meta property="og:description" content="把单词变成听写、精听、长文与写作批改;答案写在纸上,复习自动安排。">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://paperecho.app/">
+  <meta property="og:site_name" content="PaperEcho">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://paperecho.app/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PaperEcho 纸上回声 —— 纸笔备考雅思">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PaperEcho · 纸笔备考雅思">
+  <meta name="twitter:description" content="把单词变成听写、精听、长文与写作批改;答案写在纸上,复习自动安排。">
+  <meta name="twitter:image" content="https://paperecho.app/assets/og.png">
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PaperEcho 纸上回声",
+    "alternateName": "PaperEcho",
+    "description": "个人安卓雅思备考应用:把正在背的单词变成听写、精听、长文阅读与写作批改,答案写在纸上,复习自动安排。",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Android",
+    "softwareVersion": "1.2.12",
+    "url": "https://paperecho.app/",
+    "inLanguage": "zh-CN",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "PaperEcho 支持哪些手机?", "acceptedAnswer": { "@type": "Answer", "text": "Android 8.0(API 26)及以上,单 APK 约 3 MB,侧载安装即可,不依赖应用商店。" } },
+      { "@type": "Question", "name": "需要联网吗?内置本地 AI 模型吗?", "acceptedAnswer": { "@type": "Answer", "text": "文本生成与语音播放走你自己配置的云端服务(支持多家主流平台,各可保存 6 套档案),APK 不内置任何本地模型;训练数据与复习记录始终保存在本机。" } },
+      { "@type": "Question", "name": "我的训练数据会传到哪里?", "acceptedAnswer": { "@type": "Answer", "text": "词库、训练历史与复习记录只保存在你的设备上,可 JSON 备份导入导出;API 密钥仅存本机安全存储,不进日志、云备份与导出文件。" } },
+      { "@type": "Question", "name": "跟普通的背单词 App 有什么不同?", "acceptedAnswer": { "@type": "Answer", "text": "PaperEcho 把单词变成听写、精听、长文精读与写作批改,答案由你在真实纸张上完成,手机只负责出题朗读,并按每个词独立难度安排复习,贴合雅思纸笔考场。" } },
+      { "@type": "Question", "name": "发音是真人还是合成的?", "acceptedAnswer": { "@type": "Answer", "text": "发音由你配置的云端语音平台合成(支持英式/美式、0.75-1.5 倍速),加载失败自动回退设备系统语音;网站演示音频与 App 同源。" } }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -24,16 +75,20 @@
     </svg>
     <span class="brand-name">PaperEcho<span class="brand-sub">纸上回声</span></span>
   </a>
-  <nav class="site-nav" aria-label="主导航">
+  <nav class="site-nav" id="site-nav" aria-label="主导航">
     <a href="#problems">痛点</a>
     <a href="#demo">上手试试</a>
     <a href="#features">功能</a>
     <a href="#offline">数据与隐私</a>
+    <a href="#faq">常见问题</a>
   </nav>
   <a class="btn btn-primary btn-small" href="./downloads/PaperEcho.apk" download>
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
-    下载 Android 版
+    <span class="btn-label">下载 Android 版</span>
   </a>
+  <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="site-nav">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+  </button>
 </header>
 
 <main id="top">
@@ -59,8 +114,14 @@
         </div>
         <p class="hero-meta reveal">
           <!-- ★ 发布时更新:版本号、包体积、构建日期 -->
-          Android 8.0+ · v1.2.11 · 约 3 MB · 2026-08-22
+          Android 8.0+ · v1.2.12 · 约 3.2 MB · 2026-08-22
         </p>
+        <div class="hero-trust reveal" aria-label="为什么可信">
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>免费 · 无广告</span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>无需注册账户</span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>数据只在你手机</span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>六平台语音可切换</span>
+        </div>
       </div>
 
       <div class="hero-visual reveal" aria-hidden="true">
@@ -170,7 +231,7 @@
 
   <!-- ============ 上手试试(可交互演示) ============ -->
   <section class="demo" id="demo">
-    <audio id="demo-audio" preload="auto" aria-hidden="true"></audio>
+    <audio id="demo-audio" preload="none" aria-hidden="true"></audio>
     <div class="section-head reveal">
       <p class="section-eyebrow">上手试试</p>
       <h2 class="section-title">在网页上,体验一次纸笔训练</h2>
@@ -415,6 +476,48 @@
     </div>
   </section>
 
+  <!-- ============ 常见问题 ============ -->
+  <section class="faq" id="faq">
+    <div class="section-head reveal">
+      <p class="section-eyebrow">常见问题</p>
+      <h2 class="section-title">你可能还想知道</h2>
+      <p class="section-sub">关于设备要求、云端服务、数据隐私与使用方式的简要回答。</p>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>PaperEcho 支持哪些手机?</summary>
+        <div class="faq-body">
+          <p>Android 8.0(API 26)及以上,单 APK 约 3 MB,侧载安装即可,不依赖应用商店。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>需要联网吗?内置本地 AI 模型吗?</summary>
+        <div class="faq-body">
+          <p>文本生成与语音播放走你自己配置的云端服务(支持多家主流平台,各可保存 6 套档案),APK 不内置任何本地模型;训练数据与复习记录始终保存在本机。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>我的训练数据会传到哪里?</summary>
+        <div class="faq-body">
+          <p>词库、训练历史与复习记录只保存在你的设备上,可 JSON 备份导入导出;API 密钥仅存本机安全存储,不进日志、云备份与导出文件。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>跟普通的背单词 App 有什么不同?</summary>
+        <div class="faq-body">
+          <p>PaperEcho 把单词变成听写、精听、长文精读与写作批改,答案由你在真实纸张上完成,手机只负责出题朗读,并按每个词独立难度安排复习,贴合雅思纸笔考场。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>发音是真人还是合成的?</summary>
+        <div class="faq-body">
+          <p>发音由你配置的云端语音平台合成(支持英式/美式、0.75–1.5 倍速),加载失败自动回退设备系统语音;网站演示音频与 App 同源。</p>
+        </div>
+      </details>
+    </div>
+    <p class="faq-more reveal">还有其他问题?<a href="#footer">微信联系作者</a>,欢迎使用建议与反馈。</p>
+  </section>
+
   <!-- ============ 下载 ============ -->
   <section class="download" id="download">
     <div class="download-card reveal">
@@ -433,7 +536,7 @@
       </a>
       <p class="download-meta">
         <!-- ★ 发布时更新:版本号、包体积、构建日期、SHA-256 -->
-        v1.2.11 · 约 3 MB · Android 8.0(API 26)及以上 · 2026-08-22
+        v1.2.12 · 约 3.2 MB · Android 8.0(API 26)及以上 · 2026-08-22
       </p>
       <ol class="install-steps">
         <li><span>1</span>点击上方按钮下载 APK(约 3 MB)</li>
@@ -441,7 +544,7 @@
         <li><span>3</span>首次启动按引导配置你的 AI 与语音服务</li>
       </ol>
       <p class="download-sha">
-        SHA-256:01bf9dd7127fd4a01c77df10c63f3aa0687ed1415e38a990b8b9f10b8ce9ea91
+        SHA-256:0ae7f8cfc6501e87ae18a98932cad4b6bee5f655221438c62aa25a8753c1816e
       </p>
       <p class="download-note">
         语音由云端平台或系统语音播放,文本生成走你自配的云端服务。应用内数据完全保存在你的设备上,密钥仅存于本机、不进备份。
@@ -451,7 +554,7 @@
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer" id="footer">
   <div class="footer-inner">
     <div class="footer-brand">
       <svg class="brand-mark" viewBox="0 0 108 108" aria-hidden="true">

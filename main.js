@@ -267,4 +267,35 @@
       playFile(AUDIO.paragraphs[currentSection], 1, articlePlay);
     });
   }
+
+  /* ---------- 移动端导航(抽屉) ---------- */
+  var navToggle = document.querySelector(".nav-toggle");
+  var siteHeader = document.querySelector(".site-header");
+  var siteNav = document.getElementById("site-nav");
+
+  function closeMenu() {
+    if (!siteHeader) return;
+    siteHeader.classList.remove("menu-open");
+    if (navToggle) {
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "打开菜单");
+    }
+  }
+
+  if (navToggle && siteNav && siteHeader) {
+    navToggle.addEventListener("click", function () {
+      var open = siteHeader.classList.toggle("menu-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      navToggle.setAttribute("aria-label", open ? "关闭菜单" : "打开菜单");
+    });
+    siteNav.addEventListener("click", function (e) {
+      if (e.target.closest("a")) closeMenu();
+    });
+    document.addEventListener("click", function (e) {
+      if (!siteHeader.contains(e.target)) closeMenu();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeMenu();
+    });
+  }
 })();
