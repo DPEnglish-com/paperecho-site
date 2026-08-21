@@ -1,6 +1,6 @@
 {
-  "versionCode": 13,
-  "versionName": "1.2.8",
+  "versionCode": 15,
+  "versionName": "1.2.10",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "新增实时口语练习与麦克风权限保护；修复发布包生成与语音会话稳定性；刷词场景工作台保持不变"
+  "notes": "实时口语支持持续双向通话与悬浮逐字稿；修复 AI 推荐阅读最低词数在不同模型响应格式下无法解析"
 }
