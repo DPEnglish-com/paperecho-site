@@ -1,5 +1,5 @@
-# ★ 发布前把 https://paperecho.app 替换成你的正式域名
+# 官方站点:https://dpenglish-com.github.io/paperecho-site(如需更换域名,请同步更新此文件与 sitemap.xml)
 User-agent: *
 Allow: /
 
-Sitemap: https://paperecho.app/sitemap.xml
+Sitemap: https://dpenglish-com.github.io/paperecho-site/sitemap.xml

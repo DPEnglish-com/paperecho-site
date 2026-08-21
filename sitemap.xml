@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ★ 发布前把 https://paperecho.app 替换成你的正式域名(与 index.html 的 canonical/og:url 保持一致) -->
+<!-- 官方站点:https://dpenglish-com.github.io/paperecho-site(与 index.html 的 canonical/og:url 保持一致)。如需更换域名,请同步更新此文件与 robots.txt。 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://paperecho.app/</loc>
+    <loc>https://dpenglish-com.github.io/paperecho-site/</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
