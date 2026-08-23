@@ -1,6 +1,6 @@
 {
-  "versionCode": 17,
-  "versionName": "1.2.12",
+  "versionCode": 19,
+  "versionName": "1.2.14",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "修复 Qwen Realtime 首轮响应握手，并迁移不受支持的 Cherry 音色，实时口语可正常开始对话"
+  "notes": "阅读保留并展示 AI 全文构思，目标词标签与搜索改用包内快照，查词后台执行并以顶部悬浮条提示，查词覆盖显示数字标可循环切换"
 }

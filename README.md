@@ -38,7 +38,7 @@ python3 -m http.server 8080
 
 每次发布新版时,把 `site/version.json` 的 `versionCode`(整数,必须大于上一版)、`versionName`、`notes`(一句话更新说明)同步更新;`apkUrl` 保持 `downloads/PaperEcho.apk` 相对路径即可。未更新 `version.json` 会导致 App 检查更新永远提示「已是最新版本」。
 
-当前官网发布包：v1.2.12（versionCode 17），3,181,986 bytes，SHA-256 `0ae7f8cfc6501e87ae18a98932cad4b6bee5f655221438c62aa25a8753c1816e`。
+当前官网待发布包：v1.2.14（versionCode 19），约 3.0 MB，SHA-256 `ec1eb7d5594322f705bee3ba78174413201f25c258642e1feeb3379cd9266fc1`。推送前仍需完成真机口语通话冒烟测试并确认发布。
 
 ## 一·补 · 域名与 SEO 占位(发布前必做)
 
