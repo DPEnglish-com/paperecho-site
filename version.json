@@ -1,6 +1,6 @@
 {
-  "versionCode": 19,
-  "versionName": "1.2.14",
+  "versionCode": 20,
+  "versionName": "1.2.15",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "阅读保留并展示 AI 全文构思，目标词标签与搜索改用包内快照；口语通话加入设备 AEC 自然打断、断线恢复和历史删除"
+  "notes": "口语通话支持前台麦克风服务，可在后台或锁屏保持连接；完善设备 AEC 自然打断、断线恢复和历史删除"
 }
