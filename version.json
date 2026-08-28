@@ -1,6 +1,6 @@
 {
-  "versionCode": 20,
-  "versionName": "1.2.15",
+  "versionCode": 21,
+  "versionName": "1.2.16",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "口语通话支持前台麦克风服务，可在后台或锁屏保持连接；完善设备 AEC 自然打断、断线恢复和历史删除"
+  "notes": "阅读 AI 构思升级为可验证的结构化决策链：词汇体检、段落分配理由、替代路线、执行核对与写作结构复用"
 }
