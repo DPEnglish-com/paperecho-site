@@ -42,7 +42,7 @@
     "description": "个人安卓雅思备考应用:把正在背的单词变成听写、精听、长文阅读与写作批改,答案写在纸上,复习自动安排。",
     "applicationCategory": "EducationalApplication",
     "operatingSystem": "Android",
-    "softwareVersion": "1.2.17",
+    "softwareVersion": "1.2.18",
     "url": "https://dpenglish-com.github.io/paperecho-site/",
     "inLanguage": "zh-CN",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
@@ -55,7 +55,7 @@
     "@type": "FAQPage",
     "mainEntity": [
       { "@type": "Question", "name": "PaperEcho 支持哪些手机?", "acceptedAnswer": { "@type": "Answer", "text": "Android 8.0(API 26)及以上,单 APK 约 3 MB,侧载安装即可,不依赖应用商店。" } },
-      { "@type": "Question", "name": "需要联网吗?内置本地 AI 模型吗?", "acceptedAnswer": { "@type": "Answer", "text": "文本生成与语音播放走你自己配置的云端服务(支持多家主流平台,各可保存 6 套档案),APK 不内置任何本地模型;训练数据与复习记录始终保存在本机。" } },
+      { "@type": "Question", "name": "需要联网吗?内置本地 AI 模型吗?", "acceptedAnswer": { "@type": "Answer", "text": "文本生成与语音播放走你自己配置的云端服务(支持多家主流平台,各可保存 6 套档案),APK 不内置任何本地模型;训练数据与复习记录始终保存在本机。AI 任务在切换应用、锁屏或短暂断网后会自动恢复，失败时会给出可读的网络、HTTP 或返回内容错误提示。" } },
       { "@type": "Question", "name": "我的训练数据会传到哪里?", "acceptedAnswer": { "@type": "Answer", "text": "词库、训练历史与复习记录只保存在你的设备上,可 JSON 备份导入导出;API 密钥仅存本机安全存储,不进日志、云备份与导出文件。" } },
       { "@type": "Question", "name": "跟普通的背单词 App 有什么不同?", "acceptedAnswer": { "@type": "Answer", "text": "PaperEcho 把单词变成听写、精听、长文精读与写作批改,答案由你在真实纸张上完成,手机只负责出题朗读,并按每个词独立难度安排复习,贴合雅思纸笔考场。" } },
       { "@type": "Question", "name": "发音是真人还是合成的?", "acceptedAnswer": { "@type": "Answer", "text": "发音由你配置的云端语音平台合成(支持英式/美式、0.75-1.5 倍速),加载失败自动回退设备系统语音;网站演示音频与 App 同源。" } }
@@ -114,7 +114,7 @@
         </div>
         <p class="hero-meta reveal">
           <!-- ★ 发布时更新:版本号、包体积、构建日期 -->
-          Android 8.0+ · v1.2.17 · 约 3.3 MB · 2026-09-07
+          Android 8.0+ · v1.2.18 · 约 3.3 MB · 2026-09-08
         </p>
         <div class="hero-trust reveal" aria-label="为什么可信">
           <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>免费 · 无广告</span>
@@ -422,7 +422,7 @@
       <article class="feature-card reveal">
         <span class="feature-tag tag-pine">阅读</span>
         <h3>长文精读工作台</h3>
-        <p>围绕你的词汇生成任意长度的长文,目标词在文中高亮,点开即看语境义、搭配、同义词差异与准确反义词;选中任意文字即可查词或提问,查词后台执行不打断阅读。AI 构思不再是一段旁白:先体检词汇语义场,再记录立意、候选路线、section 顺序、篇幅、目标词分配理由、衔接句型和语域选择,生成后还能核对每一步是否被正文执行;支持渐进展开、段落锚点和追问。逐句译文对照,平板提供目录、正文与词汇详情三栏布局。</p>
+        <p>围绕你的词汇生成任意长度的长文,目标词在文中高亮,点开即看语境义、搭配、同义词差异与准确反义词;选中任意文字即可查词或提问。查词结果可跨文章复用，需要时可重新生成；查词与阅读提问会保存任务，即使切换应用、锁屏或短暂断网，也会在网络恢复后继续执行。AI 构思不再是一段旁白:先体检词汇语义场,再记录立意、候选路线、section 顺序、篇幅、目标词分配理由、衔接句型和语域选择,生成后还能核对每一步是否被正文执行;支持渐进展开、段落锚点和追问。逐句译文对照,平板提供目录、正文与词汇详情三栏布局。</p>
       </article>
       <article class="feature-card reveal">
         <span class="feature-tag tag-terra">写作</span>
@@ -437,7 +437,7 @@
       <article class="feature-card reveal">
         <span class="feature-tag tag-pine">复习</span>
         <h3>逐词间隔复习</h3>
-        <p>每个词拥有独立的难度参数与复习间隔;「不会」次日重现、「模糊」缩短间隔、「掌握」拉长间隔,最久没练的词优先出现。</p>
+        <p>每个词拥有独立的难度参数与复习间隔;「不会」次日重现、「模糊」缩短间隔、「掌握」拉长间隔,最久没练的词优先出现。阅读也会进入复习，保留未掌握的词和内容，避免看过一遍就消失。</p>
       </article>
     </div>
   </section>
@@ -456,7 +456,7 @@
         <ul class="offline-points">
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>文本与语音各可保存 6 套服务档案,主流平台一键切换、自定义端点与密钥</li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>密钥加密存储,不进日志、云备份与导出文件</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>JSON 备份按稳定 ID 合并导入,断点训练自动恢复</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>JSON 备份按稳定 ID 合并导入,断点训练与未完成 AI 任务自动恢复</li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>音频缓存上限 500 MB,清理不影响训练文本与复习记录</li>
         </ul>
       </div>
@@ -493,7 +493,7 @@
       <details class="faq-item">
         <summary>需要联网吗?内置本地 AI 模型吗?</summary>
         <div class="faq-body">
-          <p>文本生成与语音播放走你自己配置的云端服务(支持多家主流平台,各可保存 6 套档案),APK 不内置任何本地模型;训练数据与复习记录始终保存在本机。</p>
+          <p>文本生成与语音播放走你自己配置的云端服务(支持多家主流平台,各可保存 6 套档案),APK 不内置任何本地模型;训练数据与复习记录始终保存在本机。AI 任务在切换应用、锁屏或短暂断网后会自动恢复，失败时会给出可读的网络、HTTP 或返回内容错误提示。</p>
         </div>
       </details>
       <details class="faq-item">
@@ -536,7 +536,7 @@
       </a>
       <p class="download-meta">
         <!-- ★ 发布时更新:版本号、包体积、构建日期、SHA-256 -->
-        v1.2.17 · 约 3.3 MB · Android 8.0(API 26)及以上 · 2026-09-07
+        v1.2.18 · 约 3.3 MB · Android 8.0(API 26)及以上 · 2026-09-08
       </p>
       <ol class="install-steps">
         <li><span>1</span>点击上方按钮下载 APK(约 3 MB)</li>
@@ -544,7 +544,7 @@
         <li><span>3</span>首次启动按引导配置你的 AI 与语音服务</li>
       </ol>
       <p class="download-sha">
-        SHA-256:6a7ec5679f9e2ae3dbb5caeae1bef26202bf9b97b817a944d3238d60c84037a9
+        SHA-256:e8454cf9482a13fac688d87e48e48263aa1163fd257d9ece0d27b6e633b62259
       </p>
       <p class="download-note">
         语音由云端平台或系统语音播放,文本生成走你自配的云端服务。应用内数据完全保存在你的设备上,密钥仅存于本机、不进备份。

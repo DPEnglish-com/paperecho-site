@@ -1,6 +1,6 @@
 {
-  "versionCode": 22,
-  "versionName": "1.2.17",
+  "versionCode": 23,
+  "versionName": "1.2.18",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "查词结果跨文章复用并支持重新生成，新增单词与阅读复习，增强模型 JSON 解析容错"
+  "notes": "AI 请求切换应用或网络恢复后会自动继续，查词与阅读任务可恢复、去重并显示明确错误信息"
 }
