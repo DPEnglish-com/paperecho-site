@@ -1,6 +1,6 @@
 {
-  "versionCode": 21,
-  "versionName": "1.2.16",
+  "versionCode": 22,
+  "versionName": "1.2.17",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "阅读 AI 构思升级为可验证的结构化决策链：词汇体检、段落分配理由、替代路线、执行核对与写作结构复用"
+  "notes": "查词结果跨文章复用并支持重新生成，新增单词与阅读复习，增强模型 JSON 解析容错"
 }

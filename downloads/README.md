@@ -15,9 +15,9 @@ PaperEcho.apk
 - [ ] (可选)在下方记录 SHA-256 供用户校验:
 
 ```text
-SHA-256: 40b9802195ce5843da4299e59fd80307796a9f19e9e70b921b7eea70e6e48a54
+SHA-256: 6a7ec5679f9e2ae3dbb5caeae1bef26202bf9b97b817a944d3238d60c84037a9
 ```
 
 
 
-> 当前 APK 约 3 MB,可随站直接托管(GitHub Pages 单文件 100MB 限制内)。
+> 当前 APK 约 3.3 MB,可随站直接托管(GitHub Pages 单文件 100MB 限制内)。

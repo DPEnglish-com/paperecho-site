@@ -38,7 +38,7 @@ python3 -m http.server 8080
 
 每次发布新版时,把 `site/version.json` 的 `versionCode`(整数,必须大于上一版)、`versionName`、`notes`(一句话更新说明)同步更新;`apkUrl` 保持 `downloads/PaperEcho.apk` 相对路径即可。未更新 `version.json` 会导致 App 检查更新永远提示「已是最新版本」。
 
-当前官网待发布包：v1.2.16（versionCode 21），约 3.1 MB，SHA-256 `2f57e324b21d31041632daf5f5be2ed8d743d5cceac2f9f6249c95a5ecb22e69`。该版本新增可验证的结构化阅读 AI 构思链，已完成 Release 构建和 APK v2/v3 签名校验。
+当前官网发布包：v1.2.17（versionCode 22），约 3.3 MB，SHA-256 `6a7ec5679f9e2ae3dbb5caeae1bef26202bf9b97b817a944d3238d60c84037a9`。该版本支持跨文章复用查词结果与重新生成，新增单词/阅读复习，并增强模型 JSON 解析容错；已完成 Release 构建和 APK v2/v3 签名校验。
 
 ## 一·补 · 域名与 SEO 占位(发布前必做)
 
