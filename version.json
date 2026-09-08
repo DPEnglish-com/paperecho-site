@@ -1,6 +1,6 @@
 {
-  "versionCode": 25,
-  "versionName": "1.2.20",
+  "versionCode": 26,
+  "versionName": "1.2.21",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "输入 API Key 后自动读取供应商最新模型目录，支持手动刷新；保留预置模型作为离线兜底。"
+  "notes": "修复 Realtime 口语连接诊断、Azure 认证与移动端通话界面，优化字幕面板和场景卡。"
 }

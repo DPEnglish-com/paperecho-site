@@ -38,7 +38,7 @@ python3 -m http.server 8080
 
 每次发布新版时,把 `site/version.json` 的 `versionCode`(整数,必须大于上一版)、`versionName`、`notes`(一句话更新说明)同步更新;`apkUrl` 保持 `downloads/PaperEcho.apk` 相对路径即可。未更新 `version.json` 会导致 App 检查更新永远提示「已是最新版本」。
 
-当前官网下载包：v1.2.20（versionCode 25），约 25 MB，SHA-256 `946a03564ebe2a08d79526f2314ca9063a7b89ebf0577401ad345caac1ae013b`。本次同步 AI 配置三个入口、供应商/模型选择器，以及 Azure OpenAI 与 OpenAI-compatible Realtime。
+当前官网下载包：v1.2.21（versionCode 26），约 3.4 MB，SHA-256 `b8c5ae923b840157beb068a1c38d4bd3eb9013b680ca9a28d370e8fe592ab499`。本次修复 Realtime 口语连接诊断、Azure 认证与移动端通话界面，优化字幕面板和场景卡。
 
 ## 一·补 · 域名与 SEO 占位(发布前必做)
 
