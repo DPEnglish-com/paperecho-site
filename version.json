@@ -1,6 +1,6 @@
 {
-  "versionCode": 23,
-  "versionName": "1.2.18",
+  "versionCode": 24,
+  "versionName": "1.2.19",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "AI 请求切换应用或网络恢复后会自动继续，查词与阅读任务可恢复、去重并显示明确错误信息"
+  "notes": "AI 配置改为三个简洁入口和供应商模型选择器；新增 Azure OpenAI 与 OpenAI-compatible Realtime 配置。请安装 v1.2.19。"
 }

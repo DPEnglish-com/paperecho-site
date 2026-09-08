@@ -42,7 +42,7 @@
     "description": "个人安卓雅思备考应用:把正在背的单词变成听写、精听、长文阅读与写作批改,答案写在纸上,复习自动安排。",
     "applicationCategory": "EducationalApplication",
     "operatingSystem": "Android",
-    "softwareVersion": "1.2.18",
+    "softwareVersion": "1.2.19",
     "url": "https://dpenglish-com.github.io/paperecho-site/",
     "inLanguage": "zh-CN",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
@@ -55,7 +55,7 @@
     "@type": "FAQPage",
     "mainEntity": [
       { "@type": "Question", "name": "PaperEcho 支持哪些手机?", "acceptedAnswer": { "@type": "Answer", "text": "Android 8.0(API 26)及以上,单 APK 约 3 MB,侧载安装即可,不依赖应用商店。" } },
-      { "@type": "Question", "name": "需要联网吗?内置本地 AI 模型吗?", "acceptedAnswer": { "@type": "Answer", "text": "文本生成与语音播放走你自己配置的云端服务(支持多家主流平台,各可保存 6 套档案),APK 不内置任何本地模型;训练数据与复习记录始终保存在本机。AI 任务在切换应用、锁屏或短暂断网后会自动恢复，失败时会给出可读的网络、HTTP 或返回内容错误提示。" } },
+      { "@type": "Question", "name": "需要联网吗?内置本地 AI 模型吗?", "acceptedAnswer": { "@type": "Answer", "text": "文本生成与语音播放走你自己配置的云端服务(文本、语音、Realtime 分区选择多家主流平台),APK 不内置任何本地模型;训练数据与复习记录始终保存在本机。AI 任务在切换应用、锁屏或短暂断网后会自动恢复，失败时会给出可读的网络、HTTP 或返回内容错误提示。" } },
       { "@type": "Question", "name": "我的训练数据会传到哪里?", "acceptedAnswer": { "@type": "Answer", "text": "词库、训练历史与复习记录只保存在你的设备上,可 JSON 备份导入导出;API 密钥仅存本机安全存储,不进日志、云备份与导出文件。" } },
       { "@type": "Question", "name": "跟普通的背单词 App 有什么不同?", "acceptedAnswer": { "@type": "Answer", "text": "PaperEcho 把单词变成听写、精听、长文精读与写作批改,答案由你在真实纸张上完成,手机只负责出题朗读,并按每个词独立难度安排复习,贴合雅思纸笔考场。" } },
       { "@type": "Question", "name": "发音是真人还是合成的?", "acceptedAnswer": { "@type": "Answer", "text": "发音由你配置的云端语音平台合成(支持英式/美式、0.75-1.5 倍速),加载失败自动回退设备系统语音;网站演示音频与 App 同源。" } }
@@ -114,7 +114,7 @@
         </div>
         <p class="hero-meta reveal">
           <!-- ★ 发布时更新:版本号、包体积、构建日期 -->
-          Android 8.0+ · v1.2.18 · 约 3.3 MB · 2026-09-08
+          Android 8.0+ · v1.2.19 · 约 25 MB · 2026-09-08
         </p>
         <div class="hero-trust reveal" aria-label="为什么可信">
           <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>免费 · 无广告</span>
@@ -431,14 +431,40 @@
       </article>
       <article class="feature-card reveal">
         <span class="feature-tag tag-amber">语音与口语</span>
-        <h3>六平台语音 + 实时口语教练</h3>
-        <p>云端语音支持六种主流平台的独立档案,系统语音自动兜底;新增实时口语会话,用英文回答教练问题,可随时打断,麦克风权限只在练习时使用。</p>
+        <h3>六平台语音 + 多供应商 Realtime</h3>
+        <p>云端语音支持六种主流平台的独立档案;实时口语支持阿里百炼、OpenAI、Azure OpenAI 与 OpenAI-compatible 网关,可随时打断,麦克风权限只在练习时使用。</p>
       </article>
       <article class="feature-card reveal">
         <span class="feature-tag tag-pine">复习</span>
         <h3>逐词间隔复习</h3>
         <p>每个词拥有独立的难度参数与复习间隔;「不会」次日重现、「模糊」缩短间隔、「掌握」拉长间隔,最久没练的词优先出现。阅读也会进入复习，保留未掌握的词和内容，避免看过一遍就消失。</p>
       </article>
+    </div>
+  </section>
+
+  <!-- ============ AI 配置 ============ -->
+  <section class="ai-config" id="ai-config">
+    <div class="section-head reveal">
+      <p class="section-eyebrow">AI 配置</p>
+      <h2 class="section-title">选供应商,选模型,填一次 Key</h2>
+      <p class="section-sub">不再要求你手填端点和模型名称。文本模型、云端语音、Realtime 口语各有一个入口,点开就是熟悉的供应商与模型选择器。</p>
+    </div>
+    <div class="provider-showcase">
+      <div class="provider-copy reveal">
+        <div class="provider-step"><span>01</span><div><strong>三个清晰分区</strong><p>文本模型、云端语音、Realtime 口语,设置页一眼就能找到。</p></div></div>
+        <div class="provider-step"><span>02</span><div><strong>供应商目录与模型目录</strong><p>左侧选平台,右侧选它提供的模型;常用端点自动填好。</p></div></div>
+        <div class="provider-step"><span>03</span><div><strong>高级项默认收起</strong><p>只需要 API Key 就能开始,自定义端点和平台参数留给需要的人。</p></div></div>
+        <div class="provider-tags" aria-label="支持的供应商">
+          <span>DeepSeek</span><span>OpenAI</span><span>Gemini</span><span>Kimi</span><span>OpenRouter</span><span>Azure</span><span>阿里百炼</span><span>SiliconFlow</span>
+        </div>
+      </div>
+      <div class="provider-window reveal" aria-label="供应商与模型选择器示意">
+        <div class="provider-window-bar"><span class="window-dot terra"></span><span class="window-dot teal"></span><span class="window-dot amber"></span><b>文本模型</b><small>API Key 仅存本机</small></div>
+        <div class="provider-window-body">
+          <div class="provider-sidebar"><label>供应商</label><div class="provider-item active"><i>DS</i><span>DeepSeek</span></div><div class="provider-item"><i>O</i><span>OpenAI</span></div><div class="provider-item"><i>G</i><span>Gemini</span></div><div class="provider-item"><i>K</i><span>Kimi</span></div><div class="provider-item"><i>+</i><span>更多供应商</span></div></div>
+          <div class="provider-models"><label>DeepSeek 模型</label><div class="model-option selected"><span><b>DeepSeek Chat</b><small>deepseek-chat</small></span><em>已选</em></div><div class="model-option"><span><b>DeepSeek Reasoner</b><small>deepseek-reasoner</small></span></div><div class="mock-key"><span>••••••••••••••••</span><small>API Key</small></div><button>保存配置</button></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -471,7 +497,7 @@
           <span style="height:22%"></span><span style="height:38%"></span><span style="height:62%"></span>
           <span style="height:86%"></span><span style="height:66%"></span><span style="height:30%"></span>
         </div>
-        <p>六种云端平台 · 自定义端点与密钥<br>失败自动回退设备系统语音</p>
+        <p>六种云端平台 · Realtime 多供应商<br>失败自动回退设备系统语音</p>
       </div>
     </div>
   </section>
@@ -493,7 +519,7 @@
       <details class="faq-item">
         <summary>需要联网吗?内置本地 AI 模型吗?</summary>
         <div class="faq-body">
-          <p>文本生成与语音播放走你自己配置的云端服务(支持多家主流平台,各可保存 6 套档案),APK 不内置任何本地模型;训练数据与复习记录始终保存在本机。AI 任务在切换应用、锁屏或短暂断网后会自动恢复，失败时会给出可读的网络、HTTP 或返回内容错误提示。</p>
+          <p>文本生成与语音播放走你自己配置的云端服务(文本、语音、Realtime 分区选择多家主流平台),APK 不内置任何本地模型;训练数据与复习记录始终保存在本机。AI 任务在切换应用、锁屏或短暂断网后会自动恢复，失败时会给出可读的网络、HTTP 或返回内容错误提示。</p>
         </div>
       </details>
       <details class="faq-item">
@@ -536,7 +562,7 @@
       </a>
       <p class="download-meta">
         <!-- ★ 发布时更新:版本号、包体积、构建日期、SHA-256 -->
-        v1.2.18 · 约 3.3 MB · Android 8.0(API 26)及以上 · 2026-09-08
+        v1.2.19 · 约 25 MB · Android 8.0(API 26)及以上 · 2026-09-08
       </p>
       <ol class="install-steps">
         <li><span>1</span>点击上方按钮下载 APK(约 3 MB)</li>

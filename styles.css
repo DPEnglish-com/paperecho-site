@@ -1332,3 +1332,40 @@ svg { display: block; }
 @media (prefers-color-scheme: dark) {
   .faq-item summary { color: var(--ink); }
 }
+
+/* ---------- AI 供应商选择器展示 ---------- */
+.ai-config {
+  padding: clamp(60px, 9vw, 100px) clamp(18px, 5vw, 64px);
+  background: var(--paper);
+}
+.provider-showcase {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+  gap: clamp(28px, 6vw, 82px);
+  align-items: center;
+}
+.provider-copy { display: flex; flex-direction: column; gap: 22px; }
+.provider-step { display: flex; gap: 14px; align-items: flex-start; }
+.provider-step > span { flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 10px; background: var(--terra-container); color: var(--terra-deep); font-size: 12px; font-weight: 800; }
+.provider-step strong { display: block; font-size: 17px; }
+.provider-step p { margin-top: 3px; color: var(--ink-soft); font-size: 14px; }
+.provider-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.provider-tags span { border: 1px solid var(--line); border-radius: 999px; padding: 5px 10px; color: var(--ink-soft); font-size: 12px; background: var(--paper-2); }
+.provider-window { border: 1px solid var(--line); border-radius: 20px; overflow: hidden; background: var(--paper-2); box-shadow: var(--shadow-lg); }
+.provider-window-bar { display: flex; align-items: center; gap: 7px; padding: 13px 16px; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--paper) 82%, transparent); }
+.provider-window-bar b { margin-left: 6px; font-size: 14px; }
+.provider-window-bar small { margin-left: auto; color: var(--ink-soft); font-size: 11px; }
+.window-dot { width: 9px; height: 9px; border-radius: 50%; display: block; }
+.window-dot.terra { background: var(--terra); }.window-dot.teal { background: var(--teal); }.window-dot.amber { background: var(--amber); }
+.provider-window-body { display: grid; grid-template-columns: 38% 62%; min-height: 318px; }
+.provider-sidebar { padding: 18px 12px; border-right: 1px solid var(--line); background: var(--paper-2); }
+.provider-sidebar label, .provider-models label { display: block; margin-bottom: 12px; color: var(--ink-soft); font-size: 11px; font-weight: 700; letter-spacing: .08em; }
+.provider-item { display: flex; align-items: center; gap: 9px; padding: 10px 9px; border-radius: 11px; color: var(--ink-soft); font-size: 13px; }
+.provider-item + .provider-item { margin-top: 4px; }.provider-item.active { background: var(--teal-container); color: var(--teal-deep); font-weight: 700; }
+.provider-item i { display: grid; place-items: center; width: 27px; height: 27px; border-radius: 8px; background: var(--paper); color: var(--terra-deep); font-size: 10px; font-style: normal; font-weight: 800; }
+.provider-models { padding: 18px; background: var(--paper); }.model-option { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 13px; border: 1px solid var(--line); border-radius: 12px; }.model-option + .model-option { margin-top: 8px; }.model-option.selected { border-color: var(--teal); background: var(--teal-container); }.model-option b { display: block; font-size: 13px; }.model-option small { display: block; margin-top: 2px; color: var(--ink-soft); font-size: 11px; }.model-option em { color: var(--teal-deep); font-size: 11px; font-style: normal; font-weight: 700; }
+.mock-key { position: relative; margin-top: 18px; padding: 13px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink-soft); font-size: 13px; }.mock-key small { position: absolute; top: -8px; left: 10px; padding: 0 5px; background: var(--paper); font-size: 10px; }.provider-models button { width: 100%; margin-top: 12px; border: 0; border-radius: 11px; padding: 11px; background: var(--terra); color: #fff; font: inherit; font-size: 13px; font-weight: 700; }
+@media (max-width: 760px) { .provider-showcase { grid-template-columns: 1fr; }.provider-window-body { min-height: 290px; } }
+@media (max-width: 480px) { .provider-window-body { grid-template-columns: 42% 58%; }.provider-item { font-size: 11px; padding-inline: 5px; }.provider-item i { width: 24px; height: 24px; }.provider-models { padding: 12px; } }
