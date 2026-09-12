@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PaperEcho · 阅读工作台预览</title>
+  <!-- 自托管衬线字体(与主站同一份子集);本页不再引用任何外部字体服务 -->
+  <link rel="preload" href="./assets/fonts/paperecho-serif.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="preview.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="wordmark"><span class="mark">P</span><span>PaperEcho<small>纸上回声</small></span></div>
+      <nav>
+        <button class="nav-item active" data-screen="home"><span>⌂</span> 今日</button>
+        <button class="nav-item" data-screen="library"><span>▤</span> 阅读</button>
+        <button class="nav-item" data-screen="speaking"><span>◌</span> 口语</button>
+        <button class="nav-item" data-screen="words"><span>✦</span> 词库</button>
+      </nav>
+      <div class="sidebar-bottom"><button class="nav-item"><span>⚙</span> 设置</button><div class="profile"><div class="avatar">Y</div><div><b>Yuki</b><small>目标 7.5</small></div></div></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><button class="mobile-menu" id="mobileMenu">☰</button><div><p class="eyebrow">WEDNESDAY · 09 SEP 2026</p><h1 id="screenTitle">Good morning, Yuki</h1></div><button class="icon-button" aria-label="通知">◔<i></i></button></header>
+
+      <section class="screen" id="homeScreen">
+        <div class="hero-card">
+          <div><span class="kicker">今日建议</span><h2>先读一篇<br><em>刚好够难</em>的文章。</h2><p>根据最近 8 篇阅读，你的推荐区间是 Band 6.5–7.0。</p><button class="primary" id="startReading">开始阅读 <span>↗</span></button></div>
+          <div class="orb"><div class="orb-line"></div><strong>6.8</strong><small>推荐难度</small></div>
+        </div>
+        <div class="section-head"><div><span class="eyebrow">YOUR RHYTHM</span><h3>学习节奏</h3></div><button class="text-button">查看报告 →</button></div>
+        <div class="metrics"><article><span>连续学习</span><strong>12 <small>天</small></strong><b class="up">↑ 3 天</b></article><article><span>本周阅读</span><strong>4 <small>篇</small></strong><b>完成目标的 80%</b></article><article><span>掌握词汇</span><strong>1,284</strong><b class="up">↑ 36 本周</b></article></div>
+        <div class="section-head"><div><span class="eyebrow">CONTINUE</span><h3>继续学习</h3></div></div>
+        <div class="continue-list"><button class="continue-card" data-open="article"><span class="book-cover moss">01</span><span><b>The quiet power of urban forests</b><small>阅读 · 还剩 6 分钟</small></span><span class="arrow">→</span></button><button class="continue-card"><span class="book-cover clay">02</span><span><b>Shadowing · A difficult decision</b><small>口语 · Part 2</small></span><span class="arrow">→</span></button></div>
+      </section>
+
+      <section class="screen hidden" id="libraryScreen">
+        <div class="library-head"><div><span class="eyebrow">READING LIBRARY</span><h2>你的阅读</h2></div><button class="primary" id="newReading">＋ 新文章</button></div>
+        <div class="filter-row"><button class="filter active">全部</button><button class="filter">未完成</button><button class="filter">已完成</button><span class="filter-spacer"></span><button class="icon-button">⌕</button></div>
+        <div class="article-grid"><button class="article-card featured" data-open="article"><div class="article-art forest"><span>FEATURED</span></div><div class="article-info"><div><span class="tag">自然 · Band 6.5</span><span class="duration">8 min</span></div><h3>The quiet power of urban forests</h3><p>城市森林如何改变我们的注意力、情绪与社区关系。</p><div class="progress"><i style="width:68%"></i></div></div></button><button class="article-card"><div class="article-art blue"><span>NEW</span></div><div class="article-info"><div><span class="tag">社会 · Band 7.0</span><span class="duration">11 min</span></div><h3>Why some cities are learning to slow down</h3><p>慢城市运动与现代生活节奏的重新设计。</p><div class="progress"><i style="width:12%"></i></div></div></button><button class="article-card"><div class="article-art sand"><span>DONE</span></div><div class="article-info"><div><span class="tag">科技 · Band 6.0</span><span class="duration">7 min</span></div><h3>The memory we outsource</h3><p>当工具替我们记住一切，我们还记得什么。</p><div class="progress"><i style="width:100%"></i></div></div></button></div>
+      </section>
+
+      <section class="screen hidden" id="articleScreen">
+        <button class="back-button" id="backToLibrary">← 阅读库</button><div class="article-layout"><article class="reading-column"><div class="article-meta"><span class="tag">自然 · Band 6.5</span><span>约 8 分钟</span></div><h2>The quiet power of<br><em>urban forests</em></h2><p class="dek">城市里的树木不只是风景。越来越多的研究发现，它们正在悄悄改变我们的注意力、情绪与社区关系。</p><div class="article-tools"><button class="tool active">原文</button><button class="tool">译文</button><span></span><button class="tool">Aa</button><button class="tool">•••</button></div><div class="article-body"><p>On a summer afternoon, a pocket of woodland can feel like a different city. The traffic is still there, but it becomes a distant texture rather than the main event.</p><p>Researchers have begun to describe this effect as <mark>soft fascination</mark>: a kind of attention that holds us gently, without demanding that we solve a problem or make a decision.</p><p>That may explain why urban forests matter beyond their environmental benefits. They give people a place to recover their attention, and sometimes, to notice one another again.</p></div></article><aside class="article-aside"><div class="aside-card"><span class="eyebrow">YOUR FEEDBACK</span><h3>这篇文章对你来说难吗？</h3><p>你的评价会帮助 PaperEcho 找到更适合你的下一篇文章。</p><div class="rating-grid"><button data-rating="1"><b>1</b><small>太简单</small></button><button data-rating="2"><b>2</b><small>偏简单</small></button><button data-rating="3"><b>3</b><small>刚刚好</small></button><button data-rating="4"><b>4</b><small>偏难</small></button><button data-rating="5"><b>5</b><small>太难</small></button></div><div class="rating-result" id="ratingResult">选择一个选项，记录你的真实感受。</div></div><div class="aside-card words-card"><span class="eyebrow">VOCABULARY</span><h3>本篇重点词</h3><div class="word-row"><b>fascination</b><span>着迷 · B2</span></div><div class="word-row"><b>recover</b><span>恢复 · B1</span></div><div class="word-row"><b>texture</b><span>质感 · B2</span></div></div></aside></div>
+      </section>
+
+      <div class="toast" id="toast">已保存到你的阅读画像</div>
+      <nav class="mobile-nav"><button class="active" data-screen="home">⌂<small>今日</small></button><button data-screen="library">▤<small>阅读</small></button><button data-screen="speaking">◌<small>口语</small></button><button data-screen="words">✦<small>词库</small></button></nav>
+    </main>
+  </div>
+  <script src="preview.js"></script>
+</body>
+</html>

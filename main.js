@@ -298,4 +298,53 @@
       if (e.key === "Escape") closeMenu();
     });
   }
+  /* ---------- 顶部滚动进度线 ---------- */
+  var scrollBar = document.getElementById("scroll-bar");
+
+  function updateProgress() {
+    if (!scrollBar) return;
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - window.innerHeight;
+    var ratio = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    scrollBar.style.width = (ratio * 100).toFixed(2) + "%";
+  }
+
+  /* ---------- 当前区块高亮(导航 + 右侧章节轨道) ---------- */
+  var spyLinks = Array.prototype.slice.call(
+    document.querySelectorAll(".site-nav a[href^='#'], .section-rail a[href^='#']")
+  );
+  var spySections = [];
+  spyLinks.forEach(function (link) {
+    var id = link.getAttribute("href");
+    var section = id && id.length > 1 ? document.querySelector(id) : null;
+    if (section && spySections.indexOf(section) === -1) spySections.push(section);
+  });
+
+  function updateActiveNav() {
+    var best = null;
+    var bestTop = -Infinity;
+    spySections.forEach(function (section) {
+      var top = section.getBoundingClientRect().top - 96;
+      if (top <= 0 && top > bestTop) { bestTop = top; best = section; }
+    });
+    spyLinks.forEach(function (link) {
+      link.classList.toggle("on", best !== null && link.getAttribute("href") === "#" + best.id);
+    });
+  }
+
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function () {
+      updateProgress();
+      updateActiveNav();
+      ticking = false;
+    });
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  updateProgress();
+  updateActiveNav();
 })();

@@ -1,241 +1,210 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PaperEcho · 纸笔备考雅思 —— 把单词变成听写、精听、长文与写作批改</title>
-  <meta name="description" content="考场是纸笔,备考也该是。PaperEcho 把你正在背的单词变成听写、精听、长文阅读和写作批改;手机出题朗读,答案写在纸上,复习自动安排。雅思纸笔备考必装。">
-  <meta name="keywords" content="雅思,雅思备考,雅思听力,雅思写作,雅思词汇,听写,精听,长文精读,写作批改,纸笔考试,背单词,间隔复习,Android,安卓应用">
-  <meta name="author" content="肖恩">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#173B35">
-
-  <!-- 官方站点:https://dpenglish-com.github.io/paperecho-site(GitHub Pages)。如需更换/自定义域名,请同步改 canonical / og:url / og:image / sitemap / robots。 -->
+  <meta name="description" content="PaperEcho 是给雅思纸笔考生做的安卓训练应用:手机负责出题与朗读,答案写在纸上。围绕你自己的单词生成听写、精听、长文精读与写作批改,并按每词难度安排复习。免费、无广告、无需注册。">
+  <meta name="theme-color" content="#F4F1EA">
+  <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://dpenglish-com.github.io/paperecho-site/">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/og.png">
 
-  <!-- 社交分享卡片 (OG + Twitter) -->
-  <meta property="og:title" content="PaperEcho · 纸笔备考雅思">
-  <meta property="og:description" content="把单词变成听写、精听、长文与写作批改;答案写在纸上,复习自动安排。">
+  <!-- 社交分享 -->
   <meta property="og:type" content="website">
+  <meta property="og:title" content="PaperEcho · 纸笔备考雅思">
+  <meta property="og:description" content="考场上没有键盘。把你正在背的单词,变成听写、精听、长文与写作批改——手机出题朗读,答案写在纸上。">
   <meta property="og:url" content="https://dpenglish-com.github.io/paperecho-site/">
-  <meta property="og:site_name" content="PaperEcho">
-  <meta property="og:locale" content="zh_CN">
   <meta property="og:image" content="https://dpenglish-com.github.io/paperecho-site/assets/og.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PaperEcho 纸上回声 —— 纸笔备考雅思">
-  <meta property="og:image:type" content="image/png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PaperEcho · 纸笔备考雅思">
-  <meta name="twitter:description" content="把单词变成听写、精听、长文与写作批改;答案写在纸上,复习自动安排。">
-  <meta name="twitter:image" content="https://dpenglish-com.github.io/paperecho-site/assets/og.png">
 
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css">
+  <!-- 自托管衬线字体(思源宋体子集,SIL OFL 1.1);正文用系统无衬线 -->
+  <link rel="preload" href="./assets/fonts/paperecho-serif.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "PaperEcho 纸上回声",
-    "alternateName": "PaperEcho",
-    "description": "个人安卓雅思备考应用:把正在背的单词变成听写、精听、长文阅读与写作批改,答案写在纸上,复习自动安排。",
+    "name": "PaperEcho",
+    "alternateName": "纸上回声",
     "applicationCategory": "EducationalApplication",
-    "operatingSystem": "Android",
+    "operatingSystem": "Android 8.0+",
     "softwareVersion": "1.2.21",
-    "url": "https://dpenglish-com.github.io/paperecho-site/",
-    "inLanguage": "zh-CN",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+    "fileSize": "3.4MB",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+    "description": "给雅思纸笔考生做的安卓训练应用:手机负责出题与朗读,答案写在纸上,复习自动安排。免费、无广告、无需注册。",
+    "featureList": [
+      "建库与生成:不限数量粘贴单词,自动补释义、音标与例句",
+      "今日训练:回忆 → 听写 → 跟读 → 问答 → 自评,答案手动揭晓、评分三档",
+      "阅读与写作:目标词高亮、点开看语境义与搭配,写作给总分、四项评分与逐句纠错",
+      "语音与复习:六种云端语音平台,每个词独立的难度与间隔",
+      "数据只在本机:密钥加密存储,JSON 备份按稳定 ID 合并"
+    ],
     "mainEntity": [
-      { "@type": "Question", "name": "PaperEcho 支持哪些手机?", "acceptedAnswer": { "@type": "Answer", "text": "Android 8.0(API 26)及以上,单 APK 约 3 MB,侧载安装即可,不依赖应用商店。" } },
-      { "@type": "Question", "name": "需要联网吗?内置本地 AI 模型吗?", "acceptedAnswer": { "@type": "Answer", "text": "文本生成与语音播放走你自己配置的云端服务(文本、语音、Realtime 分区选择多家主流平台),APK 不内置任何本地模型;训练数据与复习记录始终保存在本机。AI 任务在切换应用、锁屏或短暂断网后会自动恢复，失败时会给出可读的网络、HTTP 或返回内容错误提示。" } },
-      { "@type": "Question", "name": "我的训练数据会传到哪里?", "acceptedAnswer": { "@type": "Answer", "text": "词库、训练历史与复习记录只保存在你的设备上,可 JSON 备份导入导出;API 密钥仅存本机安全存储,不进日志、云备份与导出文件。" } },
-      { "@type": "Question", "name": "跟普通的背单词 App 有什么不同?", "acceptedAnswer": { "@type": "Answer", "text": "PaperEcho 把单词变成听写、精听、长文精读与写作批改,答案由你在真实纸张上完成,手机只负责出题朗读,并按每个词独立难度安排复习,贴合雅思纸笔考场。" } },
-      { "@type": "Question", "name": "发音是真人还是合成的?", "acceptedAnswer": { "@type": "Answer", "text": "发音由你配置的云端语音平台合成(支持英式/美式、0.75-1.5 倍速),加载失败自动回退设备系统语音;网站演示音频与 App 同源。" } }
+      { "@type": "Question", "name": "需要联网吗?内置本地 AI 模型吗?", "acceptedAnswer": { "@type": "Answer", "text": "需要。文本与语音都走你自己配置的云端服务,APK 不内置本地模型。锁屏、切应用或短暂断网后,未完成的 AI 任务会自动恢复;发音支持英式美式与 0.75-1.5 倍速,失败回退系统语音。" } },
+      { "@type": "Question", "name": "我的训练数据会传到哪里?", "acceptedAnswer": { "@type": "Answer", "text": "词库、训练历史与复习记录只保存在你的设备上,可 JSON 备份导入导出;密钥仅存本机。麦克风权限只在口语练习时使用。" } },
+      { "@type": "Question", "name": "跟普通的背单词 App 有什么不同?", "acceptedAnswer": { "@type": "Answer", "text": "答案由你在真实纸张上完成,手机只负责出题朗读,并按每个词独立难度安排复习。" } }
     ]
   }
   </script>
 </head>
 <body>
 
-<header class="site-header">
+<!-- 顶部滚动进度:1px 朱红 -->
+<div class="scroll-progress" aria-hidden="true"><span id="scroll-bar"></span></div>
+
+<header class="site-header" id="site-header">
   <a class="brand" href="#top" aria-label="PaperEcho 首页">
-    <svg class="brand-mark" viewBox="0 0 108 108" aria-hidden="true">
-      <rect width="108" height="108" rx="24" fill="#173B35"/>
-      <path fill="#FDFCF8" d="M30,26 L63,26 C72,26 78,32 78,41 L78,73 C72,69 67,67 59,67 L30,67 Z"/>
-      <path fill="#F0B849" d="M35,34 L68,34 L68,39 L35,39 Z M35,45 L64,45 L64,50 L35,50 Z M35,56 L57,56 L57,61 L35,61 Z"/>
-      <path fill="#FDFCF8" d="M46,74 C55,74 63,78 68,84 L64,87 C59,82 54,80 46,80 Z"/>
+    <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+      <rect x="1" y="1" width="46" height="46" fill="#0A0A0A"/>
+      <path fill="#F4F1EA" d="M12 11h15c5 0 8 3 8 8v18c-3-2-6-3-10-3H12z"/>
+      <path fill="#C0432A" d="M16 17h16v2.5H16zM16 23h12v2.5H16zM16 29h9v2.5h-9z"/>
     </svg>
-    <span class="brand-name">PaperEcho<span class="brand-sub">纸上回声</span></span>
+    <span class="brand-name">PaperEcho<em>纸上回声</em></span>
   </a>
+
   <nav class="site-nav" id="site-nav" aria-label="主导航">
-    <a href="#problems">痛点</a>
-    <a href="#demo">上手试试</a>
-    <a href="#features">功能</a>
-    <a href="#offline">数据与隐私</a>
-    <a href="#faq">常见问题</a>
+    <a href="#problems"><i>01</i>痛点</a>
+    <a href="#demo"><i>02</i>上手试试</a>
+    <a href="#features"><i>03</i>功能</a>
+    <a href="#ai-config"><i>04</i>AI 配置</a>
+    <a href="#offline"><i>05</i>数据与隐私</a>
+    <a href="#faq"><i>06</i>常见问题</a>
   </nav>
-  <a class="btn btn-primary btn-small" href="./downloads/PaperEcho.apk" download>
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
-    <span class="btn-label">下载 Android 版</span>
+
+  <a class="btn btn-ink btn-small" href="./downloads/PaperEcho.apk" download>
+    <span class="btn-label">下载 APK</span>
+    <span class="btn-meta">1.2.21</span>
   </a>
+
   <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="site-nav">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i></span>
   </button>
 </header>
 
+<nav class="section-rail" aria-label="章节导航">
+  <a href="#problems"><i>01</i><span>痛点</span></a>
+  <a href="#demo"><i>02</i><span>演示</span></a>
+  <a href="#features"><i>03</i><span>功能</span></a>
+  <a href="#ai-config"><i>04</i><span>配置</span></a>
+  <a href="#offline"><i>05</i><span>隐私</span></a>
+  <a href="#faq"><i>06</i><span>问题</span></a>
+  <a href="#download"><i>07</i><span>下载</span></a>
+</nav>
+
 <main id="top">
 
-  <!-- ============ 首屏 ============ -->
+  <!-- ==================== 首屏 ==================== -->
   <section class="hero" id="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+
     <div class="hero-inner">
       <div class="hero-copy">
-        <p class="hero-eyebrow reveal">专为雅思纸笔备考打造</p>
-        <h1 class="hero-title reveal">考场是纸笔,<br>备考<span class="accent-terra">也该是</span>。</h1>
-        <p class="hero-sub reveal">
-          全屏幕刷题的人,上了考场写字慢、拼写错、作文写不完。
-          PaperEcho 把你正在背的单词,变成听写、精听、长文阅读和写作批改——
-          手机负责出题与朗读,答案写在纸上,复习自动安排。
-        </p>
+        <p class="stamp reveal">PaperEcho · 雅思纸笔训练 · 安卓</p>
+        <h1 class="hero-title">
+          <span class="line reveal">考场是纸笔,</span>
+          <span class="line reveal">备考<em>也该是</em>。</span>
+        </h1>
+        <p class="hero-sub lead reveal">全屏幕刷题的人,上了考场写字慢、拼写错、作文写不完。</p>
+        <p class="hero-sub hero-strong reveal"><strong>手机出题朗读,答案写在纸上,复习自动安排。</strong></p>
+        <p class="hero-note reveal">免费 · 无广告 · 无需注册账户 · 数据只在本机</p>
         <div class="hero-actions reveal">
           <!-- ★ 发布时:把 APK 放到 site/downloads/ 目录,或把 href 改成你的托管地址。点击即开始下载。 -->
-          <a class="btn btn-primary btn-large" href="./downloads/PaperEcho.apk" download>
+          <a class="btn btn-ink btn-large" href="./downloads/PaperEcho.apk" download>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
             立即下载 APK
           </a>
-          <a class="btn btn-ghost" href="#demo">先在网页上试玩</a>
-        </div>
-        <p class="hero-meta reveal">
-          <!-- ★ 发布时更新:版本号、包体积、构建日期 -->
-          Android 8.0+ · v1.2.21 · 约 3.4 MB · 2026-09-08
-        </p>
-        <div class="hero-trust reveal" aria-label="为什么可信">
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>免费 · 无广告</span>
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>无需注册账户</span>
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>数据只在你手机</span>
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>六平台语音可切换</span>
+          <a class="btn btn-quiet" href="#demo">先在网页上试玩 ↓</a>
         </div>
       </div>
 
       <div class="hero-visual reveal" aria-hidden="true">
-        <!-- 纸笔训练的手机示意:纯 CSS 绘制,配色与 App 一致 -->
+        <!-- 纸笔训练的手机示意:纯 CSS 绘制,配色与 App 的 INK 版一致 -->
         <div class="phone">
-          <div class="phone-notch"></div>
           <div class="phone-screen">
             <div class="ui-app">
-              <div class="ui-titlebar">
-                <span class="ui-title">今日训练</span>
-                <span class="ui-due">到期 5 词 · 本次混入 3</span>
+              <div class="ui-masthead">
+                <span class="ui-stamp">PaperEcho</span>
+                <span class="ui-stamp">09 / 11</span>
               </div>
-              <div class="ui-chips">
+              <div class="ui-title">今日</div>
+              <div class="ui-metric">
+                <div>
+                  <span class="ui-label">待复习</span>
+                  <span class="ui-big">17</span>
+                </div>
+                <div class="ui-metric-side">
+                  <span>预计 23 分钟</span>
+                  <span>词汇 12 · 阅读 5</span>
+                </div>
+              </div>
+              <div class="ui-meter"><span style="width:58%"></span></div>
+              <div class="ui-row"><span class="ui-label">到期词汇</span><span class="ui-value">12</span></div>
+              <div class="ui-row"><span class="ui-label">到期阅读</span><span class="ui-value">5</span></div>
+              <div class="ui-cards">
                 <span class="ui-chip">mitigate</span>
                 <span class="ui-chip">coherent</span>
                 <span class="ui-chip">urban</span>
                 <span class="ui-chip">+2</span>
               </div>
-              <div class="ui-card">
-                <div class="ui-card-label">继续上次训练</div>
-                <div class="ui-card-title">城市交通与公共空间</div>
-                <div class="ui-progress"><span style="width:60%"></span></div>
-              </div>
-              <div class="ui-card ui-dictation">
-                <div class="ui-dictation-top">
-                  <span class="ui-dictation-index">第 3 / 8 句</span>
-                  <button class="ui-play" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                  </button>
-                </div>
-                <div class="ui-ruled">
-                  <span class="ui-ruled-line" style="width:86%"></span>
-                  <span class="ui-ruled-line" style="width:72%"></span>
-                  <span class="ui-ruled-line" style="width:94%"></span>
-                </div>
-                <div class="ui-speed">
-                  <span>0.75x</span><span class="ui-speed-on">1x</span><span>1.25x</span>
-                </div>
-              </div>
-              <div class="ui-rating">
-                <span class="ui-rating-chip">不会</span>
-                <span class="ui-rating-chip ui-rating-on">模糊</span>
-                <span class="ui-rating-chip">掌握</span>
-              </div>
-              <div class="ui-bottomnav">
-                <span class="ui-nav-on">
-                  <svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg>
-                </span>
-                <span><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span>
-                <span><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 4v16"/></svg></span>
-                <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
-                <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2.6M12 18.4V21M3 12h2.6M18.4 12H21M5.6 5.6l1.9 1.9M16.5 16.5l1.9 1.9M18.4 5.6l-1.9 1.9M7.5 16.5l-1.9 1.9"/></svg></span>
-              </div>
+              <div class="ui-action">开始复习</div>
             </div>
           </div>
         </div>
-        <div class="paper-note paper-note-a">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg>
-          答案写在纸上
-        </div>
-        <div class="paper-note paper-note-b">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 010 7"/><path d="M18.4 6a8.5 8.5 0 010 12"/></svg>
-          英音 / 美音 · 逐句可听
-        </div>
+        <p class="paper-note paper-note-a">答案写在纸上</p>
       </div>
     </div>
-  </section>
 
-  <!-- ============ 痛点与解法 ============ -->
-  <section class="problems" id="problems">
-    <div class="section-head reveal">
-      <p class="section-eyebrow">痛点与解法</p>
-      <h2 class="section-title">雅思备考,难在这四个断点</h2>
-      <p class="section-sub">PaperEcho 不代替你刷题,而是把每个环节都练在纸上、练在你自己的单词上。</p>
-    </div>
-    <div class="principle-grid">
-      <article class="principle-card reveal">
-        <div class="principle-icon icon-terra">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM8 8.5h8M8 12h8M8 15.5h5"/></svg>
-        </div>
-        <h3>背了单词,做题还是反应不过来</h3>
-        <p>单词只有进入句子才会变熟。PaperEcho 把每个新词织进听写、跟读和长文,让它在多个语境里反复出现;练完标记「不会 / 模糊 / 掌握」,每词独立安排下一次复习。</p>
-      </article>
-      <article class="principle-card reveal">
-        <div class="principle-icon icon-pine">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13a8 8 0 0116 0M4 13v3a2 2 0 002 2h1v-6H6a2 2 0 00-2 2zM20 13v3a2 2 0 01-2 2h-1v-6h1a2 2 0 012 2z"/></svg>
-        </div>
-        <h3>精听没有合适的材料</h3>
-        <p>真题有限,泛听又没用。PaperEcho 围绕你正在背的单词逐句生成听写与精听内容,支持单句循环、0.75–1.5 倍速与英音美音切换,想练多少句、练到多熟,都由你决定。</p>
-      </article>
-      <article class="principle-card reveal">
-        <div class="principle-icon icon-amber">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg>
-        </div>
-        <h3>写作练了很多篇,没人告诉你差在哪</h3>
-        <p>纸笔完成后键入或粘贴,立刻得到总分、四项评分、逐句纠错与改进版作文;反复出现的错误类型会被记住,进入下一轮专项练习,而不是练完就丢。</p>
-      </article>
-      <article class="principle-card reveal">
-        <div class="principle-icon icon-terra">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
-        </div>
-        <h3>全屏幕刷题,上了考场手生</h3>
-        <p>雅思考场没有键盘。听写、问答与回忆全部由你在真实纸张上完成,从第一天起就按考场节奏练:书写速度、拼写、篇幅控制,一样都不落下。</p>
-      </article>
+    <div class="hero-foot">
+      <span>手机出题 · 纸笔作答 · 逐词复习</span>
+      <span>向下滚动</span>
     </div>
   </section>
 
-  <!-- ============ 上手试试(可交互演示) ============ -->
-  <section class="demo" id="demo">
+  <!-- ==================== 01 痛点与解法 ==================== -->
+  <section class="band" id="problems">
+    <div class="band-head reveal">
+      <p class="index">01 <span>痛点与解法</span></p>
+      <div>
+        <h2>雅思备考,难在这四个断点</h2>
+        <p class="band-sub">PaperEcho 不代替你刷题,而是把每个环节都练在纸上、练在你自己的单词上。</p>
+      </div>
+    </div>
+    <div class="problem-grid">
+      <article class="problem reveal">
+        <span class="problem-no">01</span>
+        <h3>背过的词,做题反应不过来</h3>
+        <p class="fix"><b>做法</b>让新词在听写、跟读、长文里反复出现,每词单独安排复习。</p>
+      </article>
+      <article class="problem reveal">
+        <span class="problem-no">02</span>
+        <h3>精听找不到合适材料</h3>
+        <p class="fix"><b>做法</b>用你正在背的词逐句生成听写,单句循环、变速、英音美音随选。</p>
+      </article>
+      <article class="problem reveal">
+        <span class="problem-no">03</span>
+        <h3>写了很多,没人说差在哪</h3>
+        <p class="fix"><b>做法</b>纸笔写完粘进来,拿到总分、四项评分、逐句纠错与改进版。</p>
+      </article>
+      <article class="problem reveal">
+        <span class="problem-no">04</span>
+        <h3>刷题在屏幕上,考场手生</h3>
+        <p class="fix"><b>做法</b>听写、问答、回忆全写在纸上,从第一天就按考场节奏练。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 02 上手试试(可交互演示) ==================== -->
+  <section class="band band-tint band-demo" id="demo">
     <audio id="demo-audio" preload="none" aria-hidden="true"></audio>
-    <div class="section-head reveal">
-      <p class="section-eyebrow">上手试试</p>
-      <h2 class="section-title">在网页上,体验一次纸笔训练</h2>
-      <p class="section-sub">点击设备里的按钮直接操作——这是 PaperEcho 真实训练流程的完整交互,手机与平板各有专属布局。</p>
+    <div class="band-head reveal">
+      <p class="index">02 <span>上手试试</span></p>
+      <div>
+        <h2>在网页上,体验一次纸笔训练</h2>
+        <p class="band-sub">点击设备里的按钮直接操作——这是 PaperEcho 真实训练流程的完整交互,手机与平板各有专属布局。</p>
+      </div>
     </div>
 
     <div class="demo-toolbar reveal">
@@ -251,16 +220,17 @@
       <!-- 手机演示:听 → 写 → 揭晓 → 标记 -->
       <div class="demo-device demo-phone active" id="demo-phone" data-device-panel="phone">
         <div class="dphone">
-          <div class="phone-notch"></div>
           <div class="phone-screen">
             <div class="ui-app">
-              <div class="ui-titlebar">
-                <span class="ui-title">句子听写</span>
-                <span class="ui-due">第 1 / 8 句</span>
+              <div class="ui-masthead">
+                <span class="ui-stamp">‹ 练习</span>
+                <span class="ui-stamp">第 1 / 8 句</span>
               </div>
-
-              <div class="ui-card">
-                <div class="ui-card-label">先听,然后在纸上写这句话</div>
+              <div class="ui-title">句子听写</div>
+              <div class="ui-dictation">
+                <div class="ui-dictation-top">
+                  <span class="ui-label">先听,然后在纸上写这句话</span>
+                </div>
                 <div class="dplay-row">
                   <button class="dplay-btn" type="button" data-action="play-sentence" aria-label="播放句子">
                     <svg class="dplay-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -282,31 +252,19 @@
                   <p class="danswer-en">Governments should invest in public transport to reduce urban congestion.</p>
                   <p class="danswer-zh">政府应当投资公共交通,以缓解城市拥堵。</p>
                 </div>
-                <button class="dreveal-btn" type="button" data-action="reveal">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>
-                  <span data-reveal-label>揭晓原文,核对答案</span>
-                </button>
               </div>
-
-              <div class="ui-rating drating">
+              <button class="dreveal-btn" type="button" data-action="reveal">
+                <span data-reveal-label>揭晓原文,核对答案</span>
+              </button>
+              <div class="ui-rate drating">
                 <button type="button" class="drate-chip" data-rate="again">不会</button>
                 <button type="button" class="drate-chip" data-rate="fuzzy">模糊</button>
                 <button type="button" class="drate-chip" data-rate="mastered">掌握</button>
               </div>
-
               <button class="dnext-btn" type="button" data-action="reset" disabled>标记掌握后继续</button>
-
-              <div class="ui-bottomnav">
-                <span><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg></span>
-                <span class="ui-nav-on"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span>
-                <span><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 4v16"/></svg></span>
-                <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
-                <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2.6M12 18.4V21M3 12h2.6M18.4 12H21M5.6 5.6l1.9 1.9M16.5 16.5l1.9 1.9M18.4 5.6l-1.9 1.9M7.5 16.5l-1.9 1.9"/></svg></span>
-              </div>
             </div>
           </div>
         </div>
-        <p class="demo-caption">手机:一句一句地听、写、核对、标记——纸笔训练的最小闭环</p>
       </div>
 
       <!-- 平板演示:三栏布局 -->
@@ -380,201 +338,165 @@
     </p>
   </section>
 
-  <!-- ============ 快速事实条 ============ -->
-  <section class="strip" aria-label="快速事实">
-    <div class="strip-inner">
-      <div class="strip-item reveal">
-        <strong>三步生成</strong>
-        <span>贴词 → 生成 → 拿纸开练</span>
+  <!-- ==================== 03 功能 ==================== -->
+  <section class="band" id="features">
+    <div class="band-head reveal">
+      <p class="index">03 <span>功能</span></p>
+      <div>
+        <h2>从单词到写作,一条纸笔链路</h2>
+        <p class="band-sub">六个环节共用同一份数据:你今天背的词,就是今天练习的材料。</p>
       </div>
-      <div class="strip-item reveal">
-        <strong>系统语音兜底</strong>
-        <span>云端失败自动回退设备语音</span>
-      </div>
-      <div class="strip-item reveal">
-        <strong>多档案切换</strong>
-        <span>文本与语音各可保存 6 套服务档案</span>
-      </div>
-      <div class="strip-item reveal">
-        <strong>逐词复习</strong>
-        <span>每词独立难度参数与间隔</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 功能 ============ -->
-  <section class="features" id="features">
-    <div class="section-head reveal">
-      <p class="section-eyebrow">功能</p>
-      <h2 class="section-title">从单词到写作,一条纸笔链路</h2>
     </div>
     <div class="feature-grid">
-      <article class="feature-card reveal">
-        <span class="feature-tag tag-terra">词库</span>
-        <h3>批量建词库</h3>
-        <p>不限数量粘贴单词,自动补全中文释义、英式音标、例句与常用搭配,自动分类,可逐条编辑后入库。</p>
+      <article class="feature reveal">
+        <span class="feature-tag">词库 · 今日训练</span>
+        <h3>建库、生成、上纸</h3>
+        <ul>
+          <li>不限数量粘贴单词,自动补释义、音标与例句</li>
+          <li>新词织进听写、跟读、长文与问答,一次一套</li>
+          <li>答案手动揭晓,评分三档</li>
+        </ul>
       </article>
-      <article class="feature-card reveal">
-        <span class="feature-tag tag-amber">今日训练</span>
-        <h3>五步纸笔训练</h3>
-        <p>主动回忆 → 句子听写 → 分句 Shadowing → 阅读问答 → 掌握自评;新词自动混入到期复习词,答案手动揭晓。</p>
+      <article class="feature reveal">
+        <span class="feature-tag">阅读 · 写作</span>
+        <h3>精读与逐句批改</h3>
+        <ul>
+          <li>目标词高亮,点开看语境义与搭配</li>
+          <li>查词提问是持久任务,断网也会续上</li>
+          <li>写作给总分、四项评分与逐句纠错</li>
+        </ul>
       </article>
-      <article class="feature-card reveal">
-        <span class="feature-tag tag-pine">阅读</span>
-        <h3>长文精读工作台</h3>
-        <p>围绕你的词汇生成任意长度的长文,目标词在文中高亮,点开即看语境义、搭配、同义词差异与准确反义词;选中任意文字即可查词或提问。查词结果可跨文章复用，需要时可重新生成；查词与阅读提问会保存任务，即使切换应用、锁屏或短暂断网，也会在网络恢复后继续执行。AI 构思不再是一段旁白:先体检词汇语义场,再记录立意、候选路线、section 顺序、篇幅、目标词分配理由、衔接句型和语域选择,生成后还能核对每一步是否被正文执行;支持渐进展开、段落锚点和追问。逐句译文对照,平板提供目录、正文与词汇详情三栏布局。</p>
-      </article>
-      <article class="feature-card reveal">
-        <span class="feature-tag tag-terra">写作</span>
-        <h3>纸笔写作 + 逐句批改</h3>
-        <p>按当前文章生成 Task 1 / Task 2 题目与段落骨架;纸笔完成后键入或粘贴,获得总分、四项评分、逐句纠错、词汇升级与改进版作文,批改历史全保留。</p>
-      </article>
-      <article class="feature-card reveal">
-        <span class="feature-tag tag-amber">语音与口语</span>
-        <h3>六平台语音 + 多供应商 Realtime</h3>
-        <p>云端语音支持六种主流平台的独立档案;实时口语支持阿里百炼、OpenAI、Azure OpenAI 与 OpenAI-compatible 网关,可随时打断,麦克风权限只在练习时使用。</p>
-      </article>
-      <article class="feature-card reveal">
-        <span class="feature-tag tag-pine">复习</span>
-        <h3>逐词间隔复习</h3>
-        <p>每个词拥有独立的难度参数与复习间隔;「不会」次日重现、「模糊」缩短间隔、「掌握」拉长间隔,最久没练的词优先出现。阅读也会进入复习，保留未掌握的词和内容，避免看过一遍就消失。</p>
+      <article class="feature reveal">
+        <span class="feature-tag">语音 · 复习</span>
+        <h3>朗读与间隔复习</h3>
+        <ul>
+          <li>六种云端语音平台,失败回退系统语音</li>
+          <li>每个词独立的难度与间隔</li>
+          <li>不会→次日 · 模糊→缩短 · 掌握→拉长</li>
+        </ul>
       </article>
     </div>
   </section>
 
-  <!-- ============ AI 配置 ============ -->
-  <section class="ai-config" id="ai-config">
-    <div class="section-head reveal">
-      <p class="section-eyebrow">AI 配置</p>
-      <h2 class="section-title">选供应商,选模型,填一次 Key</h2>
-      <p class="section-sub">不再要求你手填端点和模型名称。文本模型、云端语音、Realtime 口语各有一个入口,点开就是熟悉的供应商与模型选择器。</p>
+  <!-- ==================== 04 AI 配置 ==================== -->
+  <section class="band band-tint band-config" id="ai-config">
+    <div class="band-head reveal">
+      <p class="index">04 <span>AI 配置</span></p>
+      <div>
+        <h2>选供应商,选模型,填一次 Key</h2>
+        <p class="band-sub">不再要求你手填端点和模型名称。文本模型、云端语音、Realtime 口语各有一个入口,点开就是熟悉的供应商与模型选择器。</p>
+      </div>
     </div>
     <div class="provider-showcase">
       <div class="provider-copy reveal">
-        <div class="provider-step"><span>01</span><div><strong>三个清晰分区</strong><p>文本模型、云端语音、Realtime 口语,设置页一眼就能找到。</p></div></div>
-        <div class="provider-step"><span>02</span><div><strong>供应商目录与模型目录</strong><p>左侧选平台,右侧选它提供的模型;常用端点自动填好。</p></div></div>
-        <div class="provider-step"><span>03</span><div><strong>高级项默认收起</strong><p>只需要 API Key 就能开始,自定义端点和平台参数留给需要的人。</p></div></div>
+        <div class="provider-step"><span>01</span><div><p><strong>三个清晰分区</strong>文本模型、云端语音、Realtime 口语。</p></div></div>
+        <div class="provider-step"><span>02</span><div><p><strong>供应商与模型目录</strong>左选平台,右选模型,端点自动填好。</p></div></div>
+        <div class="provider-step"><span>03</span><div><p><strong>高级项默认收起</strong>一个 API Key 就能开始用。</p></div></div>
         <div class="provider-tags" aria-label="支持的供应商">
-          <span>DeepSeek</span><span>OpenAI</span><span>Gemini</span><span>Kimi</span><span>OpenRouter</span><span>Azure</span><span>阿里百炼</span><span>SiliconFlow</span>
+          <span>DeepSeek</span><span>OpenAI</span><span>Gemini</span><span>阿里百炼</span>
         </div>
       </div>
       <div class="provider-window reveal" aria-label="供应商与模型选择器示意">
-        <div class="provider-window-bar"><span class="window-dot terra"></span><span class="window-dot teal"></span><span class="window-dot amber"></span><b>文本模型</b><small>API Key 仅存本机</small></div>
+        <div class="provider-window-bar">
+          <b>文本模型</b>
+          <small>API Key 仅存本机</small>
+        </div>
         <div class="provider-window-body">
-          <div class="provider-sidebar"><label>供应商</label><div class="provider-item active"><i>DS</i><span>DeepSeek</span></div><div class="provider-item"><i>O</i><span>OpenAI</span></div><div class="provider-item"><i>G</i><span>Gemini</span></div><div class="provider-item"><i>K</i><span>Kimi</span></div><div class="provider-item"><i>+</i><span>更多供应商</span></div></div>
-          <div class="provider-models"><label>DeepSeek 模型</label><div class="model-option selected"><span><b>DeepSeek Chat</b><small>deepseek-chat</small></span><em>已选</em></div><div class="model-option"><span><b>DeepSeek Reasoner</b><small>deepseek-reasoner</small></span></div><div class="mock-key"><span>••••••••••••••••</span><small>API Key</small></div><button>保存配置</button></div>
+          <div class="provider-sidebar">
+            <label>供应商</label>
+            <div class="provider-item active"><i>DS</i><span>DeepSeek</span></div>
+            <div class="provider-item"><i>O</i><span>OpenAI</span></div>
+            <div class="provider-item"><i>+</i><span>更多供应商</span></div>
+          </div>
+          <div class="provider-models">
+            <label>DeepSeek 模型</label>
+            <div class="model-option selected"><span><b>DeepSeek Chat</b><small>deepseek-chat</small></span><em>已选</em></div>
+            <div class="model-option"><span><b>DeepSeek Reasoner</b><small>deepseek-reasoner</small></span></div>
+            <button>保存配置</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ 数据与隐私(深色带) ============ -->
+  <!-- ==================== 05 数据与隐私(墨底) ==================== -->
   <section class="offline" id="offline">
     <div class="offline-inner">
       <div class="offline-copy reveal">
-        <p class="section-eyebrow">数据与隐私</p>
-        <h2 class="section-title">你的训练数据,<br>只属于你自己</h2>
-        <p class="offline-text">
-          语音由你自配的云端平台或设备系统语音播放;
-          AI 与语音都支持多家主流服务一键配置、最多 6 套档案自由切换,密钥加密存储。
-          你的词库、训练历史与复习记录,始终只属于你自己。
-        </p>
+        <p class="index index-inverse">05 <span>数据与隐私</span></p>
+        <h2>你的训练数据,<br>只属于你自己</h2>
+        <p class="offline-text">语音与 AI 都由你自己配置:六套云端语音档案、多家文本服务一键切换,密钥加密存储。</p>
         <ul class="offline-points">
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>文本与语音各可保存 6 套服务档案,主流平台一键切换、自定义端点与密钥</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>密钥加密存储,不进日志、云备份与导出文件</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>JSON 备份按稳定 ID 合并导入,断点训练与未完成 AI 任务自动恢复</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>音频缓存上限 500 MB,清理不影响训练文本与复习记录</li>
+          <li>文本与语音各可保存 6 套服务档案,支持自定义端点</li>
+          <li>密钥只存本机安全存储,不进日志、云备份与导出</li>
+          <li>JSON 备份按稳定 ID 合并,断点训练自动恢复</li>
+          <li>麦克风权限只在口语练习时使用</li>
         </ul>
-      </div>
-      <div class="offline-card reveal" aria-hidden="true">
-        <div class="offline-card-head">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 010 7"/><path d="M18.4 6a8.5 8.5 0 010 12"/></svg>
-          多平台语音档案
-        </div>
-        <div class="offline-wave">
-          <span style="height:34%"></span><span style="height:58%"></span><span style="height:80%"></span>
-          <span style="height:100%"></span><span style="height:74%"></span><span style="height:46%"></span>
-          <span style="height:22%"></span><span style="height:38%"></span><span style="height:62%"></span>
-          <span style="height:86%"></span><span style="height:66%"></span><span style="height:30%"></span>
-        </div>
-        <p>六种云端平台 · Realtime 多供应商<br>失败自动回退设备系统语音</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ 常见问题 ============ -->
-  <section class="faq" id="faq">
-    <div class="section-head reveal">
-      <p class="section-eyebrow">常见问题</p>
-      <h2 class="section-title">你可能还想知道</h2>
-      <p class="section-sub">关于设备要求、云端服务、数据隐私与使用方式的简要回答。</p>
+  <!-- ==================== 06 常见问题 ==================== -->
+  <section class="band" id="faq">
+    <div class="band-head reveal">
+      <p class="index">06 <span>常见问题</span></p>
+      <div>
+        <h2>你可能还想知道</h2>
+        <p class="band-sub">关于设备要求、云端服务、数据隐私与使用方式的简要回答。</p>
+      </div>
     </div>
     <div class="faq-list reveal">
       <details class="faq-item" open>
-        <summary>PaperEcho 支持哪些手机?</summary>
-        <div class="faq-body">
-          <p>Android 8.0(API 26)及以上,单 APK 约 3 MB,侧载安装即可,不依赖应用商店。</p>
-        </div>
-      </details>
-      <details class="faq-item">
         <summary>需要联网吗?内置本地 AI 模型吗?</summary>
         <div class="faq-body">
-          <p>文本生成与语音播放走你自己配置的云端服务(文本、语音、Realtime 分区选择多家主流平台),APK 不内置任何本地模型;训练数据与复习记录始终保存在本机。AI 任务在切换应用、锁屏或短暂断网后会自动恢复，失败时会给出可读的网络、HTTP 或返回内容错误提示。</p>
+          <p>需要。文本与语音都走你配置的云端服务,APK 不内置本地模型。</p>
+          <ul class="faq-points">
+            <li>锁屏、切应用或短暂断网后,未完成的 AI 任务自动恢复</li>
+            <li>发音支持英式美式与 0.75–1.5 倍速,失败回退系统语音</li>
+          </ul>
         </div>
       </details>
       <details class="faq-item">
         <summary>我的训练数据会传到哪里?</summary>
         <div class="faq-body">
-          <p>词库、训练历史与复习记录只保存在你的设备上,可 JSON 备份导入导出;API 密钥仅存本机安全存储,不进日志、云备份与导出文件。</p>
+          <p>词库、训练历史与复习记录只保存在你的设备上,可 JSON 备份导入导出;密钥仅存本机。</p>
         </div>
       </details>
       <details class="faq-item">
         <summary>跟普通的背单词 App 有什么不同?</summary>
         <div class="faq-body">
-          <p>PaperEcho 把单词变成听写、精听、长文精读与写作批改,答案由你在真实纸张上完成,手机只负责出题朗读,并按每个词独立难度安排复习,贴合雅思纸笔考场。</p>
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>发音是真人还是合成的?</summary>
-        <div class="faq-body">
-          <p>发音由你配置的云端语音平台合成(支持英式/美式、0.75–1.5 倍速),加载失败自动回退设备系统语音;网站演示音频与 App 同源。</p>
+          <p>答案由你在真实纸张上完成,手机只负责出题朗读,并按每个词独立难度安排复习。</p>
         </div>
       </details>
     </div>
-    <p class="faq-more reveal">还有其他问题?<a href="#footer">微信联系作者</a>,欢迎使用建议与反馈。</p>
   </section>
 
-  <!-- ============ 下载 ============ -->
+  <!-- ==================== 07 下载 ==================== -->
   <section class="download" id="download">
-    <div class="download-card reveal">
-      <svg class="download-mark" viewBox="0 0 108 108" aria-hidden="true">
-        <rect width="108" height="108" rx="24" fill="#173B35"/>
-        <path fill="#FDFCF8" d="M30,26 L63,26 C72,26 78,32 78,41 L78,73 C72,69 67,67 59,67 L30,67 Z"/>
-        <path fill="#F0B849" d="M35,34 L68,34 L68,39 L35,39 Z M35,45 L64,45 L64,50 L35,50 Z M35,56 L57,56 L57,61 L35,61 Z"/>
-        <path fill="#FDFCF8" d="M46,74 C55,74 63,78 68,84 L64,87 C59,82 54,80 46,80 Z"/>
-      </svg>
-      <h2 class="section-title">准备好纸和笔了吗?</h2>
+    <div class="download-inner">
+      <p class="index index-inverse">07 <span>下载</span></p>
+      <h2 class="download-title">准备好纸和笔了吗?</h2>
       <p class="download-sub">下载、安装、粘贴今天的单词,剩下的交给 PaperEcho。</p>
-      <!-- ★ 发布时:把 APK 放到 site/downloads/PaperEcho.apk,或把两处 href 改成你的托管地址。点击即开始下载。 -->
-      <a class="btn btn-primary btn-large" href="./downloads/PaperEcho.apk" download>
+      <!-- ★ 发布时:把 APK 放到 site/downloads/PaperEcho.apk,或把 href 改成你的托管地址。点击即开始下载。 -->
+      <a class="btn btn-paper btn-large" href="./downloads/PaperEcho.apk" download>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
         立即下载 PaperEcho APK
       </a>
-      <p class="download-meta">
+      <dl class="download-spec">
         <!-- ★ 发布时更新:版本号、包体积、构建日期、SHA-256 -->
-        v1.2.21 · 约 3.4 MB · Android 8.0(API 26)及以上 · 2026-09-08
-      </p>
+        <div><dt>版本</dt><dd>v1.2.21</dd></div>
+        <div><dt>体积</dt><dd>约 3.4 MB</dd></div>
+        <div><dt>系统</dt><dd>Android 8.0+</dd></div>
+      </dl>
       <ol class="install-steps">
-        <li><span>1</span>点击上方按钮下载 APK(约 3 MB)</li>
-        <li><span>2</span>打开安装包时,按系统提示允许「安装未知来源应用」</li>
-        <li><span>3</span>首次启动按引导配置你的 AI 与语音服务</li>
+        <li><span>1</span>下载后按提示允许「安装未知来源应用」</li>
+        <li><span>2</span>首次启动按引导配置你的 AI 与语音服务</li>
       </ol>
-      <p class="download-sha">
-        SHA-256:b8c5ae923b840157beb068a1c38d4bd3eb9013b680ca9a28d370e8fe592ab499
-      </p>
-      <p class="download-note">
-        语音由云端平台或系统语音播放,文本生成走你自配的云端服务。应用内数据完全保存在你的设备上,密钥仅存于本机、不进备份。
-      </p>
+      <!-- 校验值只有少数人需要,默认收起:那串 64 位十六进制是整页最长的一行字 -->
+      <details class="download-verify">
+        <summary>SHA-256 校验值</summary>
+        <code>b8c5ae923b840157beb068a1c38d4bd3eb9013b680ca9a28d370e8fe592ab499</code>
+      </details>
     </div>
   </section>
 
@@ -583,25 +505,22 @@
 <footer class="site-footer" id="footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <svg class="brand-mark" viewBox="0 0 108 108" aria-hidden="true">
-        <rect width="108" height="108" rx="24" fill="#173B35"/>
-        <path fill="#FDFCF8" d="M30,26 L63,26 C72,26 78,32 78,41 L78,73 C72,69 67,67 59,67 L30,67 Z"/>
-        <path fill="#F0B849" d="M35,34 L68,34 L68,39 L35,39 Z M35,45 L64,45 L64,50 L35,50 Z M35,56 L57,56 L57,61 L35,61 Z"/>
-        <path fill="#FDFCF8" d="M46,74 C55,74 63,78 68,84 L64,87 C59,82 54,80 46,80 Z"/>
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="1" y="1" width="46" height="46" fill="#0A0A0A"/>
+        <path fill="#F4F1EA" d="M12 11h15c5 0 8 3 8 8v18c-3-2-6-3-10-3H12z"/>
+        <path fill="#C0432A" d="M16 17h16v2.5H16zM16 23h12v2.5H16zM16 29h9v2.5h-9z"/>
       </svg>
       <div>
         <strong>PaperEcho</strong>
         <span>纸上回声 · 纸笔备考雅思</span>
       </div>
     </div>
+
     <div class="footer-contact">
       <p class="footer-contact-title">作者与反馈</p>
       <p class="footer-contact-line">
-        作者:<strong>肖恩</strong>
-        <span class="footer-dot">·</span>
-        微信:<span class="footer-wechat">16659317774</span>(添加请备注 PaperEcho)
+        作者 <strong>肖恩</strong> · 微信 <span class="footer-wechat">16659317774</span>(添加请备注 PaperEcho)
       </p>
-      <p class="footer-contact-line footer-contact-sub">使用问题、功能建议或合作,欢迎微信联系。</p>
       <p class="footer-copy">© <span id="year">2026</span> PaperEcho · 把答案写在纸上,让手机负责回声。</p>
       <!-- ★ 国内部署完成 ICP 备案后,把备案号补在这里,例如:京ICP备XXXXXXXX号 -->
     </div>
