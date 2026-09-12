@@ -31,6 +31,36 @@ python3 ../tools/fonts/subset_site_serif.py   # 扫描 site/*.html|css|js 的用
 
 `preview.html`(阅读工作台预览)与主站共用同一份字体与配色,改动设计时两个页面一起看。
 
+### 品牌标记:衬线「Paper」+ 一条朱红横格线
+
+标记只用英文字母 **Paper** 构成:衬线字,**上面一行「Pa」、下面一行「per」**,
+下面压一条朱红横格线——就是「写在纸上的横格」,与产品本身(纸笔训练)同构。
+字体取自应用自带的思源宋体,轮廓由 `tools/brand/make_logo.py` 从字体里直接取路径,
+所以标记是矢量、任何尺寸都清晰,也不依赖系统字体。
+
+| 位置 | 用哪一版 | 文件 |
+| --- | --- | --- |
+| 浏览器标签页 | 墨底纸字 | `favicon.svg` |
+| 页头 / 页脚 | 墨底纸字(内联 SVG) | `index.html` 的 `.brand-mark` |
+| iOS 主屏图标 | 纸底墨字 180×180 | `assets/apple-touch-icon.png` |
+| 社交分享卡片 | 墨底纸字(含页头) | `assets/og.png` |
+| 安卓启动图标 | 纸底墨字(自适应图标前景 + 单色层) | `app/src/main/res/drawable/ic_launcher_foreground.xml` |
+| 安卓通知栏 | 单字母「P」(24dp 下多字母必然糊) | `app/src/main/res/drawable/ic_notification.xml` |
+
+正负两版是同一套轮廓,只是纸墨互换:网页底色是纸,标记用墨底才立得住;启动图标反过来。
+
+**改标记的正确姿势**:改 `tools/brand/make_logo.py` 里的参数(字块宽度、行距、细线粗细、
+描边粗细),然后
+
+```bash
+python3 tools/brand/make_logo.py            # 重新生成 favicon / 安卓 drawable / 预览页
+python3 tools/brand/make_logo.py --preview  # 另出 viz/logo-paper.png 预览图
+python3 tools/brand/verify_logo.py          # 自检:安全区、字符画、细线位置、drawable 结构
+```
+
+`verify_logo.py` 会用字符画把标记「打印」出来,所以即使看不到图也能确认字长什么样;
+它还会检查墨迹是否落在自适应图标的 66×66 安全区内(超了会被启动器裁掉)。
+
 ### 让每一节「一眼可分」(不是审美问题,是可读性问题)
 
 弱化到极致会失去辨识度:如果每节都是同一种底色、同一种版式,读者分不清哪里是新的一节。现行做法:
