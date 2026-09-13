@@ -1106,3 +1106,108 @@ p { margin: 0; }
   .demo-toolbar { flex-direction: column; align-items: flex-start; }
   .btn-large { width: 100%; }
 }
+
+/* ==================== 02 预告片 ====================
+   15 秒成片，放在本节顶部、交互演示之前。
+   分工很清楚:片子用来看一遍「这是什么」,下面的设备演示用来自己动手。
+   预览图用的是片子自己的抽帧,不是另做的图。
+   片子里的界面是还原稿,预览图的左下角已带「界面示意 · 非实机截图」标注。 */
+.promo-film {
+  max-width: 1000px;
+  margin: 0 auto clamp(40px, 4.5vw, 68px);
+}
+.promo-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #0E0E0D;
+  cursor: pointer;
+  box-shadow: 0 26px 70px rgba(10, 10, 10, .18);
+  transition: transform .5s cubic-bezier(.2, .8, .2, 1), box-shadow .5s cubic-bezier(.2, .8, .2, 1);
+}
+.promo-frame:hover,
+.promo-frame:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 34px 84px rgba(10, 10, 10, .24);
+}
+.promo-frame:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.promo-media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #0E0E0D;
+}
+.promo-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(244, 241, 234, .94);
+  transition: transform .35s cubic-bezier(.2, .8, .2, 1), background .35s ease;
+}
+.promo-play::after {
+  content: "";
+  border-left: 17px solid var(--ink);
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  margin-left: 5px;
+  transition: border-left-color .35s ease;
+}
+.promo-frame:hover .promo-play,
+.promo-frame:focus-visible .promo-play { transform: translate(-50%, -50%) scale(1.08); }
+.promo-frame:hover .promo-play { background: var(--accent); }
+.promo-frame:hover .promo-play::after { border-left-color: #fff; }
+.promo-len {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  /* The film frame is dark in BOTH themes, so this must not use the on-ink
+     token: that one flips to near-black in dark mode, which made the badge
+     unreadable on the poster (measured 1.01:1). The background is opaque so
+     the contrast does not depend on which frame the poster happens to show.
+     Hard-coded on purpose — check-tokens.py compares the two stylesheets. */
+  background: #0A0A0A;
+  color: #F4F1EA;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .06em;
+}
+.promo-frame.is-playing .promo-play,
+.promo-frame.is-playing .promo-len { display: none; }
+.promo-film figcaption {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--ink-2);
+}
+.promo-film figcaption b {
+  color: var(--ink);
+  font-weight: 600;
+}
+@media (max-width: 620px) {
+  .promo-film { margin-bottom: 40px; }
+  .promo-play { width: 60px; height: 60px; }
+  .promo-play::after { border-left-width: 14px; border-top-width: 9px; border-bottom-width: 9px; }
+}
+.promo-dl {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13.5px;
+  color: var(--accent-text);
+  border-bottom: 1px solid var(--hair-2);
+  transition: color .3s ease, border-color .3s ease;
+}
+.promo-dl:hover { color: var(--accent); border-color: var(--accent); }

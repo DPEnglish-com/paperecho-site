@@ -347,4 +347,40 @@
   window.addEventListener("resize", onScroll);
   updateProgress();
   updateActiveNav();
+
+  /* ---- 02 预告片:点了才加载和播放 ------------------------------------
+     preload="none" 是有意的:移动端展开这一节不该顺带下 3 MB 视频。
+     点击才 play(),既满足浏览器对有声自动播放的限制,也不浪费流量。
+     播完回到封面。
+
+     注意:ended 之后必须先 pause 再 load()。load() 会把 paused 复位成
+     false,浏览器随即从 0 秒自己续播 —— 观众看到的是「刚看完又自动重播」。
+     同理不监听 pause:用户用原生控制条暂停时不该把封面盖回去。 */
+  var promoFrame = document.querySelector("[data-promo-frame]");
+  var promoVideo = document.querySelector("[data-promo-video]");
+  if (promoFrame && promoVideo) {
+    promoFrame.addEventListener("click", function () {
+      if (promoVideo.paused) {
+        promoFrame.classList.add("is-playing");
+        promoVideo.controls = true;
+        var attempt = promoVideo.play();
+        if (attempt && typeof attempt.catch === "function") {
+          attempt.catch(function () {
+            /* 被拒绝时把控制条留给用户,不静默失败 */
+            promoVideo.controls = true;
+          });
+        }
+      } else {
+        promoVideo.pause();
+      }
+    });
+
+    promoVideo.addEventListener("ended", function () {
+      promoVideo.pause();
+      promoFrame.classList.remove("is-playing");
+      promoVideo.controls = false;
+      promoVideo.currentTime = 0;
+      promoVideo.load();
+    });
+  }
 })();
