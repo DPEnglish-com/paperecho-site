@@ -15,7 +15,7 @@ PaperEcho.apk
 - [ ] (可选)在下方记录 SHA-256 供用户校验:
 
 ```text
-SHA-256: 5b91ffa019221788cff26402264304fd0328b05a31e8224153b34509bc5b7264
+SHA-256: 490b217c5dfb3ddab22fad1e27d81d5de0c2bb753c3e63d4f0e3f0888daa8b9b
 ```
 
 

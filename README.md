@@ -270,7 +270,7 @@ python3 tools/web/check-tokens.py     # ④ styles.css 与 preview.css 的令牌
 > cat version.json
 > ```
 
-当前官网下载包：v1.2.22（versionCode 27），约 5.5 MB，SHA-256 `5b91ffa019221788cff26402264304fd0328b05a31e8224153b34509bc5b7264`。本次新增可折叠任务浮层、阅读未知词复习评价和稳健模型解析，修复设置保存与阅读卡顿。
+当前官网下载包：v1.2.22（versionCode 27），约 5.5 MB，SHA-256 `490b217c5dfb3ddab22fad1e27d81d5de0c2bb753c3e63d4f0e3f0888daa8b9b`。本次新增可折叠任务浮层、阅读未知词复习评价和稳健模型解析，并优化阅读、搜索、刷词与导航流畅度。
 
 ## 一·补 · 域名与 SEO 占位(发布前必做)
 
