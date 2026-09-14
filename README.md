@@ -270,7 +270,7 @@ python3 tools/web/check-tokens.py     # ④ styles.css 与 preview.css 的令牌
 > cat version.json
 > ```
 
-当前官网下载包：v1.2.21（versionCode 26），约 3.4 MB，SHA-256 `b8c5ae923b840157beb068a1c38d4bd3eb9013b680ca9a28d370e8fe592ab499`。本次修复 Realtime 口语连接诊断、Azure 认证与移动端通话界面，优化字幕面板和场景卡。
+当前官网下载包：v1.2.22（versionCode 27），约 5.4 MB，SHA-256 `e2f6c5727b1feef8b4e276e39a507f553aa54a8bd9277298b081d5f7d25b20ee`。本次新增 INK 学习工作台与练习导航，修复阅读、复习和实时口语体验。
 
 ## 一·补 · 域名与 SEO 占位(发布前必做)
 

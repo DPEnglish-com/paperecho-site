@@ -10,14 +10,14 @@ PaperEcho.apk
 
 ## 发布清单
 
-- [ ] `PaperEcho.apk` 已放入本目录
-- [ ] `index.html` 中版本号 / 包体积 / 构建日期已更新(两处,已用 `★` 注释标出)
+- [x] `PaperEcho.apk` 已放入本目录
+- [x] `index.html` 中版本号 / 包体积已更新
 - [ ] (可选)在下方记录 SHA-256 供用户校验:
 
 ```text
-SHA-256: e8454cf9482a13fac688d87e48e48263aa1163fd257d9ece0d27b6e633b62259
+SHA-256: e2f6c5727b1feef8b4e276e39a507f553aa54a8bd9277298b081d5f7d25b20ee
 ```
 
 
 
-> 当前 APK 约 3.3 MB,可随站直接托管(GitHub Pages 单文件 100MB 限制内)。
+> 当前 APK 约 5.4 MB,可随站直接托管(GitHub Pages 单文件 100MB 限制内)。

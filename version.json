@@ -1,6 +1,6 @@
 {
-  "versionCode": 26,
-  "versionName": "1.2.21",
+  "versionCode": 27,
+  "versionName": "1.2.22",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "修复 Realtime 口语连接诊断、Azure 认证与移动端通话界面，优化字幕面板和场景卡。"
+  "notes": "新增 INK 学习工作台与练习导航，修复阅读、复习和实时口语体验。"
 }
