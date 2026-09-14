@@ -1,6 +1,6 @@
 {
-  "versionCode": 27,
-  "versionName": "1.2.22",
+  "versionCode": 28,
+  "versionName": "1.2.23",
   "apkUrl": "downloads/PaperEcho.apk",
   "notes": "新增可折叠任务浮层、阅读未知词复习评价和稳健模型解析，并优化阅读、搜索、刷词与导航流畅度。"
 }

@@ -270,7 +270,11 @@ python3 tools/web/check-tokens.py     # ④ styles.css 与 preview.css 的令牌
 > cat version.json
 > ```
 
-当前官网下载包：v1.2.22（versionCode 27），约 5.5 MB，SHA-256 `490b217c5dfb3ddab22fad1e27d81d5de0c2bb753c3e63d4f0e3f0888daa8b9b`。本次新增可折叠任务浮层、阅读未知词复习评价和稳健模型解析，并优化阅读、搜索、刷词与导航流畅度。
+当前官网下载包：v1.2.23（versionCode 28），约 5.5 MB，SHA-256 `03503dbf39a3da1c2dc51e2d0215e801b0f9ffaf49f582109b8ab6b78e7b57cc`。本次新增可折叠任务浮层、阅读未知词复习评价和稳健模型解析，并优化阅读、搜索、刷词与导航流畅度。
+
+> 2026-09-14 说明：这一版与上一版（1.2.22 / versionCode 27）是**同一份构建**，dex 字符串表逐条比对后
+> 只差 `version=1.2.23(28)` 等版本字面量。之所以换号重发，是因为 1.2.22 打包时忘了递增 `versionCode`，
+> 已装 1.2.22 的设备不会触发更新——**只要动了会影响已装设备的改动，就必须递增 `versionCode`**。
 
 ## 一·补 · 域名与 SEO 占位(发布前必做)
 
