@@ -2,5 +2,5 @@
   "versionCode": 27,
   "versionName": "1.2.22",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "新增 INK 学习工作台与练习导航，修复阅读、复习和实时口语体验。"
+  "notes": "新增可折叠任务浮层、阅读未知词复习评价和稳健模型解析，修复设置保存与阅读卡顿。"
 }
