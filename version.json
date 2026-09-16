@@ -1,6 +1,6 @@
 {
-  "versionCode": 31,
-  "versionName": "1.2.26",
+  "versionCode": 32,
+  "versionName": "1.2.27",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "精听可正常滚动并显示译文；修复弹窗按钮被挤出、作答被清空、后台任务浮层挤空正文等界面问题。"
+  "notes": "复习中心日期轴与计数修正；训练完成页可滚动；弹窗避开键盘；清理死代码与文本裁切。"
 }

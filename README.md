@@ -270,7 +270,7 @@ python3 tools/web/check-tokens.py     # ④ styles.css 与 preview.css 的令牌
 > cat version.json
 > ```
 
-当前官网下载包：v1.2.26（versionCode 31），约 5.5 MB，SHA-256 `95a1bee1ddebef9da384c5de317b5b935cf30a63e77fa6f2e70a18d2d8482c8e`。本轮修复阅读精听「点显示原文后无法下拉」——面板改为常驻传输控件加滚动区，长句长段与译文不再被裁掉，横屏也不会塌成零高度；训练页跟读面板移出 LazyColumn，滚动不再掐断录音；顺带修掉弹窗按钮被挤出、逐题作答被懒回收清空、后台任务浮层挤空正文、平板提取词汇点了没反应、键盘盖住提交按钮、底栏未避让系统导航栏等问题。
+当前官网下载包：v1.2.27（versionCode 32），约 5.5 MB，SHA-256 `363c84a54bad6f31c99dd6a6f1c1afc7cfc81ec3a68e0e157310646fcac31354`。本轮是上一版全界面复核的收尾：复习中心 30 天日期轴不再被裁、逾期与今日计数改报真实总数、跨零点回到前台自动重算；训练完成页可滚动并补上 MASTERED 计数；配置弹窗真正避开键盘与系统栏；删除 BusyOverlay/MetricRow/LookupFloatingBar 三处死代码，并修掉一批窄屏与大字号下的文本裁切。
 
 > 2026-09-14 说明：这一版与上一版（1.2.22 / versionCode 27）是**同一份构建**，dex 字符串表逐条比对后
 > 只差 `version=1.2.23(28)` 等版本字面量。之所以换号重发，是因为 1.2.22 打包时忘了递增 `versionCode`，
