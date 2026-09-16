@@ -1,6 +1,6 @@
 {
-  "versionCode": 29,
-  "versionName": "1.2.24",
+  "versionCode": 30,
+  "versionName": "1.2.25",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "Room 聚合统计、阅读统计增量化，并进一步优化阅读、搜索与导航流畅度。"
+  "notes": "修复模型返回内容无法解析与后台任务取消失效；阅读精听新增暂停键和显示译文。"
 }

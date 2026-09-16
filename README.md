@@ -270,7 +270,7 @@ python3 tools/web/check-tokens.py     # ④ styles.css 与 preview.css 的令牌
 > cat version.json
 > ```
 
-当前官网下载包：v1.2.24（versionCode 29），约 5.5 MB，SHA-256 `11a3f6b1d7133fe15fd6fa3a4e1ceea32adc6c965e985dac2ce0e6d532dbffe2`。本次加入 Room 聚合统计和阅读统计增量化，并进一步优化阅读、搜索与导航流畅度。
+当前官网下载包：v1.2.25（versionCode 30），约 5.5 MB，SHA-256 `9a5d71ec571f4ceca397b5543000841d8a3dd61c6d3732984b304a2ea4ff2036`。本次根治「模型返回内容无法解析」（就地修复尾逗号、字符串内裸换行、单引号、全角引号等语法偏差，消除假截断，截断重试改为放大输出预算并降温）与「后台任务取消失效」（终态写入改 NonCancellable、任务登记改用 ActiveTaskRegistry）；阅读精听新增暂停键与「显示译文」。
 
 > 2026-09-14 说明：这一版与上一版（1.2.22 / versionCode 27）是**同一份构建**，dex 字符串表逐条比对后
 > 只差 `version=1.2.23(28)` 等版本字面量。之所以换号重发，是因为 1.2.22 打包时忘了递增 `versionCode`，
