@@ -1,6 +1,6 @@
 {
-  "versionCode": 30,
-  "versionName": "1.2.25",
+  "versionCode": 31,
+  "versionName": "1.2.26",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "修复模型返回内容无法解析与后台任务取消失效；阅读精听新增暂停键和显示译文。"
+  "notes": "精听可正常滚动并显示译文；修复弹窗按钮被挤出、作答被清空、后台任务浮层挤空正文等界面问题。"
 }
