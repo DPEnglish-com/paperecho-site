@@ -1,6 +1,6 @@
 {
-  "versionCode": 32,
-  "versionName": "1.2.27",
+  "versionCode": 33,
+  "versionName": "1.2.28",
   "apkUrl": "downloads/PaperEcho.apk",
-  "notes": "复习中心日期轴与计数修正；训练完成页可滚动；弹窗避开键盘；清理死代码与文本裁切。"
+  "notes": "精听新增「下一句不显示」开关：跳句自动隐藏原文与译文；跳句、切换训练步骤或离开正文页时立即停止上一句音频。"
 }
