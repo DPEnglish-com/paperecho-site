@@ -8,10 +8,13 @@
   <meta name="theme-color" content="#F4F1EA">
   <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://dpenglish-com.github.io/paperecho-site/">
-  <!-- 图标带版本串：favicon 的缓存浏览器单独一份、键是 URL，内容换了但路径不变
-       时它会一直用旧图，硬刷新也不一定重取。改图标必须同时把 v 往上推。 -->
-  <link rel="icon" href="./favicon.svg?v=2" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png?v=2">
+  <!-- 图标换路径（-v2）而不是加 ?v=2 查询串：这个路径从上线起没变过，
+       只换内容时浏览器那份图标缓存会一直用旧图，硬刷新也不一定重取。
+       查询串试过一轮，在用户的 Chrome 里没产生新图标记录，原因没查清；
+       换新路径则任何缓存实现下都是全新键，不赌这一点。
+       旧路径的文件保留（内容同步成新的），还缓存着旧 HTML 的标签页仍会请求它。 -->
+  <link rel="icon" href="./favicon-v2.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon-v2.png">
 
   <!-- 社交分享 -->
   <meta property="og:type" content="website">
