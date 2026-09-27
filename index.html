@@ -8,8 +8,10 @@
   <meta name="theme-color" content="#F4F1EA">
   <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://dpenglish-com.github.io/paperecho-site/">
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <!-- 图标带版本串：favicon 的缓存浏览器单独一份、键是 URL，内容换了但路径不变
+       时它会一直用旧图，硬刷新也不一定重取。改图标必须同时把 v 往上推。 -->
+  <link rel="icon" href="./favicon.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png?v=2">
 
   <!-- 社交分享 -->
   <meta property="og:type" content="website">
