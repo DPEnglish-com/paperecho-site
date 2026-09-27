@@ -46,14 +46,21 @@ python3 ../tools/fonts/subset_site_serif.py   # 扫描 site/*.html|css|js 的用
 
 | 位置 | 用哪一版 | 文件 |
 | --- | --- | --- |
-| 浏览器标签页 | 墨底纸字 | `favicon.svg` |
+| 浏览器标签页 | 纸底墨字 | `favicon-v2.svg`(旧路径 `favicon.svg` 同步保留) |
 | 页头 / 页脚 | 墨底纸字(内联 SVG) | `index.html` 的 `.brand-mark` |
-| iOS 主屏图标 | 纸底墨字 180×180 | `assets/apple-touch-icon.png` |
+| iOS 主屏图标 | 纸底墨字 180×180 | `assets/apple-touch-icon-v2.png`(旧路径同步保留) |
 | 社交分享卡片 | 墨底纸字(含页头) | `assets/og.png` |
 | 安卓启动图标 | 纸底墨字(自适应图标前景 + 单色层) | `app/src/main/res/drawable/ic_launcher_foreground.xml` |
 | 安卓通知栏 | 单字母「P」(24dp 下多字母必然糊) | `app/src/main/res/drawable/ic_notification.xml` |
 
-正负两版是同一套轮廓,只是纸墨互换:网页底色是纸,标记用墨底才立得住;启动图标反过来。
+正负两版是同一套轮廓,只是纸墨互换。**标签栏图标用纸底墨字**(2026-09-27 改):
+标签栏、收藏夹、分享卡片的底色多半是浅色,标记要能在浅底上自己站住;
+页头 / 页脚那两处落在纸色页面上,仍是墨底纸字,墨块才立得住。
+
+**改图标要连文件名一起换**(`-v2` → `-v3`)。这个路径从上线起没变过,只换内容时
+浏览器那份图标缓存会一直用旧图,硬刷新也不一定重取;加查询串在实测里没生效。
+旧文件不要删:还缓存着旧 HTML 的标签页仍会去请求它,删掉就是 404。
+生成器已经把新旧两个路径一起写了,改完直接跑它即可。
 
 **改标记的正确姿势**:改 `tools/brand/make_logo.py` 里的参数(字块宽度、行距、细线粗细、
 描边粗细),然后
@@ -350,7 +357,7 @@ python3 tools/web/check-tokens.py     # ④ styles.css 与 preview.css 的令牌
 以阿里云 OSS 为例(腾讯云 COS 同理):
 
 1. 创建 Bucket,**开启静态网站托管**,默认首页填 `index.html`;
-2. 上传 `site/` 里的 `index.html / styles.css / main.js / favicon.svg / assets/` 全部内容(**不要把 downloads/ 里的 README 传上去**);
+2. 上传 `site/` 里的 `index.html / styles.css / main.js / favicon-v2.svg / favicon.svg / assets/` 全部内容(**不要把 downloads/ 里的 README 传上去**);
 3. APK 单独传到同 Bucket 的 `downloads/` 路径(用方案 A 的相对路径即可),或传 CDN 后改 3 处 `href`;
 4. 绑定自己的域名 + CDN + HTTPS;按国内要求完成 **ICP 备案**(纯海外访问可跳过);
 5. 别忘了在 `index.html` 的 `<meta name="theme-color">` 等元信息里没有需要改的域名项,分享时用你的最终域名。
@@ -400,7 +407,8 @@ site/
 ├── main.js             # 入场动画、进度线、导航高亮、设备切换与交互演示逻辑
 ├── preview.html        # 阅读工作台预览页(桌面形态示意,与主站同一套 INK 令牌)
 ├── preview.css         # 预览页样式(自托管字体,不再引用 Google Fonts)
-├── favicon.svg         # 图标(与 App 启动图标同款)
+├── favicon-v2.svg      # 标签栏图标(纸底墨字;页头页脚内联的是墨底纸字)
+├── favicon.svg         # 上一版路径,内容与 v2 相同,留给缓存着旧 HTML 的标签页
 ├── robots.txt          # 爬虫允许规则与 sitemap 指向(发布前替换域名)
 ├── sitemap.xml         # 站点地图(发布前替换域名)
 ├── version.json        # App 内「检查更新」的版本清单(发布时同步 versionCode/versionName/notes)
