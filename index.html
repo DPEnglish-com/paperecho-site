@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PaperEcho · 纸笔备考雅思 - 把单词变成听写、精听、长文与写作批改</title>
-  <meta name="description" content="PaperEcho 是给雅思纸笔考生做的安卓训练应用:手机负责出题与朗读,答案写在纸上。BYOK 可免费使用,也可购买 PaperEcho 托管 AI 点数与云端语音。">
+  <meta name="description" content="PaperEcho 是给雅思纸笔考生做的安卓训练应用:手机负责出题与朗读,答案写在纸上,复习自动安排。下载、安装与全部本机功能免费且无广告;云端 AI 与语音由 PaperEcho 托管,购买一次性 AI 点数包即可使用,无需自备密钥。">
   <meta name="theme-color" content="#F4F1EA">
   <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://dpenglish-com.github.io/paperecho-site/">
@@ -39,17 +39,24 @@
     "softwareVersion": "1.2.28",
     "fileSize": "5.5MB",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
-    "description": "给雅思纸笔考生做的安卓训练应用:手机负责出题与朗读,答案写在纸上,复习自动安排。支持自带 API Key 免费使用,也支持托管 AI 点数。",
+    "description": "给雅思纸笔考生做的安卓训练应用:手机负责出题与朗读,答案写在纸上,复习自动安排。下载、安装与全部本机功能免费且无广告;云端 AI 由 PaperEcho 托管,购买一次性 AI 点数包即可使用。",
     "featureList": [
-      "建库与生成:不限数量粘贴单词,自动补释义、音标与例句",
+      "建库与生成:不限数量粘贴单词,自动补释义、英式音标、例句与常用搭配",
       "今日训练:回忆 → 听写 → 跟读 → 问答 → 自评,答案手动揭晓、评分三档",
-      "阅读与写作:目标词高亮、点开看语境义与搭配,写作给总分、四项评分与逐句纠错",
-      "语音与复习:六种云端语音平台,每个词独立的难度与间隔",
-      "BYOK 密钥加密存储;使用托管 AI 时仅发送完成任务所需内容"
+      "长文阅读:目标词高亮,点开看核心义、引申义链条、本文语境与同义词差异",
+      "写作批改:纸笔作文贴进来,拿到目标分、四项估分、逐段点评与逐句纠错",
+      "精听与跟读:按句或按段播放,暂停继续、单句循环、0.75–1.5 倍速、显示译文",
+      "口语通话:实时双向语音教练,覆盖 IELTS Part 1/2/3 与日常、职场、学术场景",
+      "快速刷词:内置场景词表,翻卡式主动回忆,与主词库双向联动",
+      "复习中心:按逾期、今日到期、薄弱词汇和到期阅读组织队列,并显示未来 7 天负荷",
+      "学习报告:连续学习、弱项分布、活动趋势与成就",
+      "数据自主:词库与训练记录默认存本机,JSON 备份导入导出,支持 Anki 兼容 TSV 导出",
+      "托管 AI:无需自备密钥,下载安装与全部本机功能免费,云端 AI 购买一次性 AI 点数包(文本点数 + 云端语音秒数)"
     ],
     "mainEntity": [
-      { "@type": "Question", "name": "需要联网吗?内置本地 AI 模型吗?", "acceptedAnswer": { "@type": "Answer", "text": "需要。文本与语音都走你自己配置的云端服务,APK 不内置本地模型。锁屏、切应用或短暂断网后,未完成的 AI 任务会自动恢复;发音支持英式美式与 0.75-1.5 倍速,失败回退系统语音。" } },
-      { "@type": "Question", "name": "我的训练数据会传到哪里?", "acceptedAnswer": { "@type": "Answer", "text": "词库、训练历史与复习记录默认保存在设备上。BYOK 请求直连你配置的服务;选择 PaperEcho 托管 AI 时,完成任务所需的文本或音频会发送到托管服务。密钥仅存本机。" } },
+      { "@type": "Question", "name": "需要联网吗?内置本地 AI 模型吗?", "acceptedAnswer": { "@type": "Answer", "text": "需要。文本与语音都走你配置的云端服务,APK 不内置本地模型。锁屏、切应用或短暂断网后,未完成的 AI 任务会自动恢复;发音支持英式美式与 0.75-1.5 倍速,失败回退系统语音。" } },
+      { "@type": "Question", "name": "我的训练数据会传到哪里?", "acceptedAnswer": { "@type": "Answer", "text": "词库、训练历史与复习记录默认保存在设备上,可 JSON 备份导入导出,不参与任何云端同步。使用托管 AI 时,只有完成当次学习动作所需的文本或音频会发送到 PaperEcho 服务端;密码学意义上无法反推的匿名账户标识代替账号,不留 API Key、不留 prompt 全文。" } },
+      { "@type": "Question", "name": "要花多少钱?", "acceptedAnswer": { "@type": "Answer", "text": "下载、安装和所有本机功能都免费,没有广告,也没有推荐流。云端 AI 动作走 PaperEcho 托管服务,需要购买一次性 AI 点数包(文本点数与云端语音秒数打包),额度用完再买,没有订阅和自动续费。" } },
       { "@type": "Question", "name": "跟普通的背单词 App 有什么不同?", "acceptedAnswer": { "@type": "Answer", "text": "答案由你在真实纸张上完成,手机只负责出题朗读,并按每个词独立难度安排复习。" } }
     ]
   }
@@ -75,7 +82,7 @@
     <a href="#problems"><i>01</i>痛点</a>
     <a href="#demo"><i>02</i>上手试试</a>
     <a href="#features"><i>03</i>功能</a>
-    <a href="#ai-config"><i>04</i>AI 配置</a>
+    <a href="#ai-config"><i>04</i>AI 与计费</a>
     <a href="#offline"><i>05</i>数据与隐私</a>
     <a href="#faq"><i>06</i>常见问题</a>
   </nav>
@@ -94,7 +101,7 @@
   <a href="#problems"><i>01</i><span>痛点</span></a>
   <a href="#demo"><i>02</i><span>演示</span></a>
   <a href="#features"><i>03</i><span>功能</span></a>
-  <a href="#ai-config"><i>04</i><span>配置</span></a>
+  <a href="#ai-config"><i>04</i><span>计费</span></a>
   <a href="#offline"><i>05</i><span>隐私</span></a>
   <a href="#faq"><i>06</i><span>问题</span></a>
   <a href="#download"><i>07</i><span>下载</span></a>
@@ -108,7 +115,6 @@
 
     <div class="hero-inner">
       <div class="hero-copy">
-        <p class="stamp reveal">雅思纸笔训练 · 安卓</p>
         <h1 class="hero-title">
           <span class="line reveal">考场是纸笔,</span>
           <span class="line reveal">备考<em>也该是</em>。</span>
@@ -204,10 +210,10 @@
 
   <!-- 事实行:原来散在首屏的三句小字(免费/计费/无广告/系统要求),归到首屏之外 -->
   <div class="fact-row" aria-label="使用条件">
-    <span><b>BYOK 免费</b>自带 API Key,不付费用全部功能</span>
-    <span><b>托管 AI 按点数</b>不想自己配 Key 时可选</span>
+    <span><b>本机免费</b>下载安装即用,本机功能不收费</span>
+    <span><b>云端按需购买</b>一次性 AI 点数包,无订阅、无自动续费</span>
     <span><b>无广告</b>没有开屏、没有插屏、没有推荐流</span>
-    <span><b>Android 8.0+</b>约 5.5 MB,无需注册账户</span>
+    <span><b>Android 8.0+</b>约 5.5 MB,无需注册账号</span>
   </div>
 
   <!-- ==================== 01 痛点与解法 ==================== -->
@@ -245,18 +251,18 @@
     <audio id="demo-audio" preload="none" aria-hidden="true"></audio>
     <div class="band-head reveal">
       <h2>在网页上,体验一次纸笔训练</h2>
-      <p class="band-sub">下面设备里的按钮都能点:先看 15 秒成片,再自己走一遍完整流程,手机与平板各有专属布局。</p>
+      <p class="band-sub">下面设备里的按钮都能点:先看 20 秒成片,再自己走一遍完整流程,手机与平板各有专属布局。</p>
     </div>
 
     <figure class="promo-film reveal">
       <button class="promo-frame" type="button" data-promo-frame
-              aria-label="播放 PaperEcho 15 秒宣传片">
+              aria-label="播放 PaperEcho 20 秒宣传片">
         <video class="promo-media" data-promo-video preload="none" playsinline
                poster="./assets/video/paperecho-promo-poster.jpg">
           <source src="./assets/video/paperecho-promo.mp4" type="video/mp4">
         </video>
         <span class="promo-play" aria-hidden="true"></span>
-        <span class="promo-len">15 秒</span>
+        <span class="promo-len">20 秒</span>
       </button>
     </figure>
 
@@ -386,7 +392,7 @@
     </div>
 
     <p class="demo-note reveal">
-      演示发音为云端语音服务预生成的录音,与 App 内语音同源;实际应用支持六种云端语音平台与系统语音兜底。
+      演示发音为 PaperEcho 托管语音服务预生成的录音,与 App 内语音同源;合成失败时自动回退安卓系统语音。
       <a href="./downloads/PaperEcho.apk" download>下载 App</a> 体验完整的五步训练、长文阅读与写作批改。
     </p>
   </section>
@@ -402,27 +408,31 @@
         <span class="feature-tag">词库 · 今日训练</span>
         <h3>建库、生成、上纸</h3>
         <ul>
-          <li>不限数量粘贴单词,自动补释义、音标与例句</li>
+          <li>不限数量粘贴单词,自动补释义、英式音标、例句与常用搭配</li>
           <li>新词织进听写、跟读、长文与问答,一次一套</li>
           <li>答案手动揭晓,评分三档</li>
+          <li>快速刷词:内置场景词表,翻卡式主动回忆,与主词库双向联动</li>
         </ul>
       </article>
       <article class="feature reveal">
         <span class="feature-tag">阅读 · 写作</span>
         <h3>精读与逐句批改</h3>
         <ul>
-          <li>目标词高亮,点开看语境义与搭配</li>
+          <li>目标词高亮,点开看核心义、本文语境与同义词差异</li>
           <li>查词提问是持久任务,断网也会续上</li>
-          <li>写作给总分、四项评分与逐句纠错</li>
+          <li>精听按句或按段播放:暂停继续、单句循环、显示译文</li>
+          <li>写作给目标分、四项估分、逐段点评与逐句纠错</li>
         </ul>
       </article>
       <article class="feature reveal">
         <span class="feature-tag">语音 · 复习</span>
         <h3>朗读与间隔复习</h3>
         <ul>
-          <li>六种云端语音平台,失败回退系统语音</li>
-          <li>每个词独立的难度与间隔</li>
-          <li>不会→次日 · 模糊→缩短 · 掌握→拉长</li>
+          <li>托管云端语音,失败自动回退安卓系统语音</li>
+          <li>口语通话:实时双向语音教练,覆盖 IELTS Part 1/2/3 与日常、职场、学术场景</li>
+          <li>复习中心按逾期、今日到期、薄弱词汇组织队列,并显示未来 7 天负荷</li>
+          <li>每个词独立的难度与间隔:不会→次日 · 模糊→缩短 · 掌握→拉长</li>
+          <li>学习报告:连续学习、弱项分布、活动趋势与成就</li>
         </ul>
       </article>
       <!-- 训练界面顶部的步骤条:上面三张卡讲的六个模块,落在一次训练里就是这五步 -->
@@ -436,38 +446,38 @@
     </div>
   </section>
 
-  <!-- ==================== 04 AI 配置 ==================== -->
+  <!-- ==================== 04 AI 与计费 ==================== -->
   <section class="band band-tint band-config" id="ai-config">
     <div class="band-head reveal">
-      <h2>选供应商,选模型,填一次 Key</h2>
-      <p class="band-sub">不再要求你手填端点和模型名称。文本模型、云端语音、Realtime 口语各有一个入口,点开就是熟悉的供应商与模型选择器。</p>
+      <h2>装好就能用,不必先开一堆账号</h2>
+      <p class="band-sub">不用申请 API Key、不用填端点和模型名。生成文章、批改作文、合成语音、实时口语全部走 PaperEcho 托管服务,按学习动作计费。</p>
     </div>
     <div class="provider-showcase">
       <div class="provider-copy reveal">
-        <div class="provider-step"><span>01</span><div><p><strong>三个清晰分区</strong>文本模型、云端语音、Realtime 口语。</p></div></div>
-        <div class="provider-step"><span>02</span><div><p><strong>供应商与模型目录</strong>左选平台,右选模型,端点自动填好。</p></div></div>
-        <div class="provider-step"><span>03</span><div><p><strong>高级项默认收起</strong>一个 API Key 就能开始用。</p></div></div>
-        <div class="provider-tags" aria-label="支持的供应商">
-          <span>DeepSeek</span><span>OpenAI</span><span>Gemini</span><span>阿里百炼</span>
+        <div class="provider-step"><span>01</span><div><p><strong>三类动作分开结算</strong>文本生成、云端语音、实时口语各有额度,互不挤占。</p></div></div>
+        <div class="provider-step"><span>02</span><div><p><strong>本机功能免费</strong>下载、安装与全部本机功能都不收费,云端 AI 才需要额度。</p></div></div>
+        <div class="provider-step"><span>03</span><div><p><strong>一次性点数包</strong>文本点数与云端语音秒数打包出售,用完再买,没有订阅与自动续费。</p></div></div>
+        <div class="provider-tags" aria-label="计费方式">
+          <span>本机免费</span><span>一次性点数包</span><span>文本点数</span><span>云端语音秒数</span>
         </div>
       </div>
-      <div class="provider-window reveal" aria-label="供应商与模型选择器示意">
+      <div class="provider-window reveal" aria-label="托管 AI 额度面板示意">
         <div class="provider-window-bar">
-          <b>文本模型</b>
-          <small>API Key 仅存本机</small>
+          <b>PaperEcho 托管 AI</b>
+          <small>无需自备密钥</small>
         </div>
         <div class="provider-window-body">
           <div class="provider-sidebar">
-            <label>供应商</label>
-            <div class="provider-item active"><i>DS</i><span>DeepSeek</span></div>
-            <div class="provider-item"><i>O</i><span>OpenAI</span></div>
-            <div class="provider-item"><i>+</i><span>更多供应商</span></div>
+            <label>学习动作</label>
+            <div class="provider-item active"><i>文</i><span>生成与批改</span></div>
+            <div class="provider-item"><i>音</i><span>云端语音</span></div>
+            <div class="provider-item"><i>说</i><span>实时口语</span></div>
           </div>
           <div class="provider-models">
-            <label>DeepSeek 模型</label>
-            <div class="model-option selected"><span><b>DeepSeek Chat</b><small>deepseek-chat</small></span><em>已选</em></div>
-            <div class="model-option"><span><b>DeepSeek Reasoner</b><small>deepseek-reasoner</small></span></div>
-            <button>保存配置</button>
+            <label>当前额度</label>
+            <div class="model-option selected"><span><b>AI 点数</b><small>按动作固定扣费</small></span><em>可用</em></div>
+            <div class="model-option"><span><b>云端语音</b><small>按合成秒数结算</small></span></div>
+            <button>同步托管余额</button>
           </div>
         </div>
       </div>
@@ -478,13 +488,13 @@
   <section class="offline" id="offline">
     <div class="offline-inner">
       <div class="offline-copy reveal">
-        <h2>训练数据默认本地,<br>托管服务透明可选</h2>
-        <p class="offline-text">语音与 AI 都由你自己配置:六套云端语音档案、多家文本服务一键切换,密钥加密存储。</p>
+        <h2>训练数据留在本机,<br>托管只处理当次动作</h2>
+        <p class="offline-text">词库、训练历史、复习记录和阅读进度都写在这台手机上。托管服务只接收完成当次学习动作所必需的内容,用完即止。</p>
         <ul class="offline-points">
-          <li>文本与语音各可保存 6 套服务档案,支持自定义端点</li>
-          <li>密钥只存本机安全存储,不进日志、云备份与导出</li>
-          <li>JSON 备份按稳定 ID 合并,断点训练自动恢复</li>
-          <li>麦克风权限只在口语练习时使用</li>
+          <li>词库与训练记录默认只存本机,JSON 备份按稳定 ID 合并,断点训练自动恢复</li>
+          <li>托管账户用匿名标识,不绑定手机号或邮箱;不留 API Key,不留 prompt 全文</li>
+          <li>所有 AI 动作由服务端报价、扣点,失败自动退回点数,不做通用模型中转</li>
+          <li>麦克风权限只在口语练习时使用;云端语音失败自动回退安卓系统语音</li>
         </ul>
       </div>
     </div>
@@ -500,7 +510,7 @@
       <details class="faq-item" open>
         <summary>需要联网吗?内置本地 AI 模型吗?</summary>
         <div class="faq-body">
-          <p>需要。文本与语音都走你配置的云端服务,APK 不内置本地模型。</p>
+          <p>需要。文本与语音都走 PaperEcho 托管服务,APK 不内置本地模型。</p>
           <ul class="faq-points">
             <li>锁屏、切应用或短暂断网后,未完成的 AI 任务自动恢复</li>
             <li>发音支持英式美式与 0.75-1.5 倍速,失败回退系统语音</li>
@@ -508,9 +518,25 @@
         </div>
       </details>
       <details class="faq-item">
+        <summary>要花多少钱?</summary>
+        <div class="faq-body">
+          <p>下载、安装和所有本机功能都不收费,没有广告,也没有推荐流。云端 AI 动作走 PaperEcho 托管服务,需要购买一次性 AI 点数包:文本点数与云端语音秒数打包在一起,额度用完再买,没有订阅,也不会自动续费。</p>
+          <ul class="faq-points">
+            <li>点数包一次性购买,不做订阅与自动续费;语音秒数随包附带,按合成秒数扣减</li>
+            <li>动作由服务端先报价后扣点,失败自动退回,不做通用模型中转</li>
+          </ul>
+        </div>
+      </details>
+      <details class="faq-item">
         <summary>我的训练数据会传到哪里?</summary>
         <div class="faq-body">
-          <p>词库、训练历史与复习记录只保存在你的设备上,可 JSON 备份导入导出;密钥仅存本机。</p>
+          <p>词库、训练历史、复习记录与阅读进度只保存在你的设备上,可 JSON 备份导入导出,不参与任何云端同步。托管服务只接收完成当次学习动作所必需的内容。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>不想用了,账号和数据怎么办?</summary>
+        <div class="faq-body">
+          <p>应用内的托管账户可以随时注销:一个事务删除该账户的任务、已落盘音频、账本、订单与供应商调用记录,幂等执行。本机学习数据不受影响,仍然留在你的设备上。</p>
         </div>
       </details>
       <details class="faq-item">

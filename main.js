@@ -306,7 +306,7 @@
     var doc = document.documentElement;
     var max = doc.scrollHeight - window.innerHeight;
     var ratio = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-    scrollBar.style.width = (ratio * 100).toFixed(2) + "%";
+    scrollBar.style.transform = "scaleX(" + ratio.toFixed(4) + ")";
   }
 
   /* ---------- 当前区块高亮(导航 + 右侧章节轨道) ---------- */
