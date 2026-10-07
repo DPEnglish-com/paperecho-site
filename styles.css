@@ -897,6 +897,11 @@ p { margin: 0; }
 .demo-note a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
 .demo-note a:hover { color: var(--accent); }
 
+/* 正文里的出站链接:与演示区同一种写法(实墨下划线,悬停转朱红)。
+   SE English 是站上唯一的出站链接,出现在 FAQ 与页脚。 */
+.faq-body a, .footer-contact-line a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.faq-body a:hover, .footer-contact-line a:hover { color: var(--accent); }
+
 /* ============================ 规格条 ============================ */
 
 /* ============================ AI 配置 ============================ */
@@ -1047,6 +1052,9 @@ p { margin: 0; }
   height: 1px;
   background: var(--accent);
 }
+/* 要点后面还可以跟一句带链接的收尾（SE English 那条），
+   与要点列表自己的上边距同档，不至于贴着最后一条 */
+.faq-points + p { margin-top: 14px; }
 
 /* ============================ 下载 ============================ */
 .download { background: var(--ink); color: var(--paper); padding: var(--step) var(--gutter); }
